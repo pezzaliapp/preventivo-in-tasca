@@ -52,7 +52,7 @@ il calcolo trasporti e il calcolo rata esattamente come oggi (in Home: tre grand
    nessun reindirizzamento, nessuna scrittura o cancellazione dei loro dati sul telefono.
    La nuova app è una prova parallela: Alessandro la vede, la prova e poi decide.
 
-1. **Nessuna funzione persa.** Prima di scrivere codice crei `docs/MAPPA_FUNZIONI.md`: l'elenco
+1. **Nessuna funzione persa.** Prima di scrivere codice crei `_sorgenti/note/MAPPA_FUNZIONI.md`: l'elenco
    completo di ogni funzione, opzione, testo legale, avviso e dato delle tre app, ciascuna con una
    casella. Alla fine ogni casella deve essere spuntata con il punto in cui vive nella nuova app.
 2. **Numeri identici.** I calcoli (rata, spese, VR, fasce, trasporto pallet/groupage, gasolio,
@@ -114,7 +114,7 @@ data/agente.pack.json  data/d/*.bin
 strumenti/analisi.html     analisi mensile trasporti (back office, fuori dal menu principale)
 scripts/aggiorna_gasolio.py   .github/workflows/gasolio.yml
 tests/                     node --test (golden test + test di integrazione)
-docs/                      MAPPA_FUNZIONI.md, DECISIONI.md, AGGIORNARE_I_DATI.md
+docs/                      AGGIORNARE_I_DATI.md, GUIDA_PROVA.md (note interne in _sorgenti/note/)
 ```
 
 ### Abbinamento listino ↔ catalogo trasporti
@@ -138,8 +138,8 @@ service worker con scope limitato alla cartella della nuova app, così non inter
 Lavora per fasi. Alla fine di ogni fase: test verdi, commit con messaggio chiaro in italiano,
 breve resoconto ad Alessandro (cosa è fatto, cosa resta, decisioni prese).
 
-- **Fase 0 — Ricognizione.** Leggi i tre sorgenti per intero. Scrivi `docs/MAPPA_FUNZIONI.md`
-  e `docs/DECISIONI.md`. Fai ad Alessandro **in un solo messaggio** le domande aperte:
+- **Fase 0 — Ricognizione.** Leggi i tre sorgenti per intero. Scrivi `_sorgenti/note/MAPPA_FUNZIONI.md`
+  e `_sorgenti/note/DECISIONI.md`. Fai ad Alessandro **in un solo messaggio** le domande aperte:
   a) il trasporto va incluso nell'importo finanziato del noleggio? (proponi: sì, con interruttore);
   b) Google Analytics: togliere o tenere?;
   c) licenza: "Tutti i diritti riservati" (proposta) o MIT come Rel01 oggi?;
@@ -163,7 +163,7 @@ breve resoconto ad Alessandro (cosa è fatto, cosa resta, decisioni prese).
   viewport 375×812 (iPhone), 412×915 (Android), 768×1024 (tablet), 1440×900 (laptop), tema chiaro e
   scuro, offline dopo il primo caricamento. Screenshot di ogni schermata in `docs/screenshot/`.
   Controllo accessibilità (axe-core solo come strumento di sviluppo, non nell'app). Lighthouse PWA.
-  Ripassa `MAPPA_FUNZIONI.md` casella per casella.
+  Ripassa `_sorgenti/note/MAPPA_FUNZIONI.md` casella per casella.
 - **Fase 7 — Versione di prova.** Solo quando Alessandro lo chiede: GitHub Pages dal branch `main`,
   cartella root, sul nuovo indirizzo `pezzaliapp.github.io/preventivo-in-tasca/`, da provare in
   parallelo alle app attuali. Workflow gasolio **copiato** (quello originale resta dov'è).

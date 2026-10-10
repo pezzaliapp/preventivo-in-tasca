@@ -1,0 +1,57 @@
+{
+ "aggiornato": "2026-09-30",
+ "servizi": {
+  "pallet": {
+   "titolo": "Spedizione su pallet",
+   "listino": "Tariffe pallet 2026",
+   "riferimento": "Gennaio 2026",
+   "condizioni": [
+    "Tariffa per pallet, massimo 5 pallet per spedizione",
+    "Sponda idraulica inclusa con scarico a piano strada, salvo dove indicato",
+    "Preavviso telefonico: supplemento a spedizione e 24 ore in più sui tempi di resa",
+    "Escluse località disagiate e servizi extra"
+   ],
+   "fornitore": "Samberisi Autotrasporti – rete Pallex"
+  },
+  "groupage": {
+   "titolo": "Groupage / parziale",
+   "listino": "Tariffe groupage 2026",
+   "riferimento": "Agosto 2026",
+   "decorrenza": "2026-02-01",
+   "storico": [
+    {
+     "data": "2026-02-01",
+     "testo": "Nuove tariffe 2026"
+    },
+    {
+     "data": "2026-04-09",
+     "testo": "Aggiornamento Sicilia e Sardegna"
+    },
+    {
+     "data": "2026-06-01",
+     "testo": "Aggiornamento Sardegna"
+    },
+    {
+     "data": "2026-07-29",
+     "testo": "Aggiornamento Sardegna (tariffe agosto 2026)"
+    }
+   ],
+   "condizioni": [
+    "Tariffa a scaglioni: si applica la fascia più alta tra metri lineari, numero di bancali e peso",
+    "Prezzi validi entro 30 km dal capoluogo di provincia",
+    "Verificare a destino l'accesso per automezzi fino a 12 m (Nord-Centro) o 16 m (Sud-Isole)",
+    "Sicilia: tariffe per resa intermodale",
+    "Nessun giorno di consegna tassativo, tranne i carichi completi"
+   ],
+   "fornitore": "Transcoop Soc. Coop."
+  }
+ },
+ "catalogo": {
+  "fonte": "Prospetto pesi e misure 2026",
+  "nota": "Peso lordo e misure di ogni collo. Il tipo di pallet e le maggiorazioni per i colli fuori misura sono calcolati con i criteri di classificazione pallet 2026."
+ },
+ "gasolio": {
+  "fonte": "MIMIT – Osservatorio prezzi carburanti",
+  "nota": "Prezzo medio nazionale self del gasolio, rete stradale, aggiornato ogni giorno"
+ }
+}

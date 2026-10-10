@@ -1,0 +1,3113 @@
+[
+ {
+  "id": "handy-scan",
+  "nome": "HANDY SCAN",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 1.5,
+    "l": 40,
+    "p": 20,
+    "h": 25
+   }
+  ],
+  "corriere": true,
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-2000s",
+  "nome": "TOUCH MEC 2000S",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 165.0,
+    "l": 130,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-2000s-lift-con-sollevatore-cod-21100399",
+  "nome": "TOUCH MEC 2000S LIFT ( con sollevatore cod. 21100399 )",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 218.0,
+    "l": 160,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-2000s-p",
+  "nome": "TOUCH MEC 2000S-P",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 171.0,
+    "l": 130,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-2000s-p-lift-con-sollevatore-cod-21100399",
+  "nome": "TOUCH MEC 2000S-P LIFT ( con sollevatore cod. 21100399 )",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 224.0,
+    "l": 160,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-1000-sonar",
+  "nome": "TOUCH MEC 1000 SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 191.0,
+    "l": 130,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-1000-p-sonar",
+  "nome": "TOUCH MEC 1000-P SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 200.0,
+    "l": 130,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-822vdl-sonar",
+  "nome": "TOUCH MEC 822VDL SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 132.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-822vdll-sonar",
+  "nome": "TOUCH MEC 822VDLL SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 186.0,
+    "l": 160,
+    "p": 75,
+    "h": 153
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-822vdl-p-sonar",
+  "nome": "TOUCH MEC 822VDL-P SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 141.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-822vdll-p-sonar",
+  "nome": "TOUCH MEC 822VDLL-P SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 195.0,
+    "l": 160,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-900-esd",
+  "nome": "TOUCH MEC 900 ESD",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 111.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-900b-esd",
+  "nome": "TOUCH MEC 900B ESD",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 116.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "touch-mec-900-p-bas-esd",
+  "nome": "TOUCH MEC 900-P BAS ESD",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 120.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-822vdl-sonar",
+  "nome": "MEC 822VDL SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 128.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-822vdll-sonar",
+  "nome": "MEC 822VDLL SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 181.0,
+    "l": 160,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-822vdl-p-sonar",
+  "nome": "MEC 822VDL-P SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 136.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-822vdll-p-sonar",
+  "nome": "MEC 822VDLL-P SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 186.0,
+    "l": 160,
+    "p": 75,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-22l-sonar",
+  "nome": "MEC 22L SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 131.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-22l-p-sonar",
+  "nome": "MEC 22L-P SONAR",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 137.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-100-esd",
+  "nome": "MEC 100 ESD",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 102.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-110b-esd",
+  "nome": "MEC 110B ESD",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 107.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-5b",
+  "nome": "MEC 5B",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 140.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-1-mec-1-bat",
+  "nome": "MEC 1 / MEC 1 BAT",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 90.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "sollevatore-ruota-cod-21100397",
+  "nome": "SOLLEVATORE RUOTA cod. 21100397",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 65.0,
+    "l": 110,
+    "p": 60,
+    "h": 50
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "sollevatore-pneumatico-automatico-mec-cod-21100399",
+  "nome": "SOLLEVATORE PNEUMATICO AUTOMATICO MEC cod. 21100399",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 65.0,
+    "l": 110,
+    "p": 60,
+    "h": 50
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "moto-mec",
+  "nome": "MOTO MEC",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 90.0,
+    "l": 96,
+    "p": 69,
+    "h": 160
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "bench-moto-mec",
+  "nome": "BENCH MOTO MEC",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 45.0,
+    "l": 73,
+    "p": 52,
+    "h": 55
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-200-truck-mec-200a-truck",
+  "nome": "MEC 200 TRUCK / MEC 200A TRUCK",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 281.0,
+    "l": 160,
+    "p": 75,
+    "h": 153
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mec-200-c-truck-mec-200a-c-truck",
+  "nome": "MEC 200-C TRUCK / MEC 200A-C TRUCK",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 293.0,
+    "l": 160,
+    "p": 75,
+    "h": 153
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "b-300",
+  "nome": "B 300",
+  "categoria": "Equilibratrici",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 120.0,
+    "l": 95,
+    "p": 65,
+    "h": 110
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "cm-1200bb",
+  "nome": "CM 1200BB",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 412.0,
+    "l": 115,
+    "p": 120,
+    "h": 182
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "puma",
+  "nome": "PUMA",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 330.0,
+    "l": 130,
+    "p": 76,
+    "h": 180
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "puma-con-premitallone-cod-20100161",
+  "nome": "PUMA CON PREMITALLONE cod. 20100161",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 361.0,
+    "l": 132,
+    "p": 106,
+    "h": 195
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "ligro",
+  "nome": "LIGRO",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 265.0,
+    "l": 120,
+    "p": 94,
+    "h": 193
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "ligro-gt",
+  "nome": "LIGRO GT",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 279.0,
+    "l": 125,
+    "p": 95,
+    "h": 190
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-536s-gt",
+  "nome": "F 536S GT",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 330.0,
+    "l": 115,
+    "p": 100,
+    "h": 190
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-536s-gt-rf-system",
+  "nome": "F 536S GT + RF SYSTEM",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 420.0,
+    "l": 115,
+    "p": 110,
+    "h": 190
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-536s-gt-multi-system",
+  "nome": "F 536S GT + MULTI SYSTEM",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 410.0,
+    "l": 115,
+    "p": 110,
+    "h": 190
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-528s-gt",
+  "nome": "F 528S GT",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 252.0,
+    "l": 115,
+    "p": 110,
+    "h": 190
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-470s",
+  "nome": "F 470S",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 301.0,
+    "l": 130,
+    "p": 97,
+    "h": 180
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-470s-rf-system",
+  "nome": "F 470S + RF SYSTEM",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 392.0,
+    "l": 130,
+    "p": 97,
+    "h": 180
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-535s",
+  "nome": "F 535S",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 249.0,
+    "l": 110,
+    "p": 90,
+    "h": 175
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-535s-rf-system",
+  "nome": "F 535S + RF SYSTEM",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 340.0,
+    "l": 110,
+    "p": 90,
+    "h": 175
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-535s-multi-system",
+  "nome": "F 535S + MULTI SYSTEM",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 332.0,
+    "l": 110,
+    "p": 90,
+    "h": 175
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-535s-leverless",
+  "nome": "F 535S LEVERLESS",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 261.0,
+    "l": 140,
+    "p": 92,
+    "h": 175
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-535s-leverless-rf-system",
+  "nome": "F 535S LEVERLESS + RF SYSTEM",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 352.0,
+    "l": 140,
+    "p": 92,
+    "h": 175
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-535s-leverless-multi-system",
+  "nome": "F 535S LEVERLESS + MULTI SYSTEM",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 344.0,
+    "l": 140,
+    "p": 92,
+    "h": 175
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "b-224",
+  "nome": "B 224",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 278.0,
+    "l": 115,
+    "p": 87,
+    "h": 175
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "b-224-helper-b-line",
+  "nome": "B 224 + HELPER B LINE",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 343.0,
+    "l": 115,
+    "p": 87,
+    "h": 175
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "b-124",
+  "nome": "B 124",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 226.0,
+    "l": 115,
+    "p": 87,
+    "h": 170
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-26a-bike",
+  "nome": "F 26A BIKE",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 261.0,
+    "l": 96,
+    "p": 75,
+    "h": 163
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-26a-bike-rf-system",
+  "nome": "F 26A BIKE + RF SYSTEM",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 352.0,
+    "l": 105,
+    "p": 85,
+    "h": 168
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "f-24-bike",
+  "nome": "F 24 BIKE",
+  "categoria": "Smontagomme",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 184.0,
+    "l": 97,
+    "p": 75,
+    "h": 91
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "multi-system",
+  "nome": "MULTI SYSTEM",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 93.0,
+    "l": 141,
+    "p": 38,
+    "h": 44
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "rf-system",
+  "nome": "RF SYSTEM",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 103.0,
+    "l": 125,
+    "p": 50,
+    "h": 40
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "helper-b-line",
+  "nome": "HELPER B LINE",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 83.0,
+    "l": 135,
+    "p": 45,
+    "h": 45
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "elha-sx",
+  "nome": "ELHA SX",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 40.0,
+    "l": 77,
+    "p": 29,
+    "h": 24
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "erha-dx",
+  "nome": "ERHA DX",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 18.0,
+    "l": 75,
+    "p": 24,
+    "h": 20
+   }
+  ],
+  "corriere": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "premitallone-puma-cod-20100161",
+  "nome": "PREMITALLONE PUMA cod. 20100161",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 25.0,
+    "l": 76,
+    "p": 56,
+    "h": 30
+   }
+  ],
+  "corriere": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "gruppo-gonfiaggio-gt-cod-20100402",
+  "nome": "GRUPPO GONFIAGGIO GT cod. 20100402",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 24.0,
+    "l": 85,
+    "p": 51,
+    "h": 45
+   }
+  ],
+  "corriere": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "kit-disp-gonfiaggio-gt-pedale-cod-20100405",
+  "nome": "KIT DISP. GONFIAGGIO GT + PEDALE cod. 20100405",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 30.0,
+    "l": 85,
+    "p": 51,
+    "h": 45
+   }
+  ],
+  "corriere": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "pedana-pneumatica-di-sollevamento-cod-20100288",
+  "nome": "PEDANA PNEUMATICA DI SOLLEVAMENTO cod. 20100288",
+  "categoria": "Accessori smontagomme",
+  "colli": [
+   {
+    "imballo": "crt on plt",
+    "kg": 30.0,
+    "l": 95,
+    "p": 60,
+    "h": 45
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "super-vigor-60",
+  "nome": "SUPER VIGOR 60",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 1480.0,
+    "l": 240,
+    "p": 220,
+    "h": 130
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "super-vigor-2450n",
+  "nome": "SUPER VIGOR 2450N",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 1220.0,
+    "l": 230,
+    "p": 190,
+    "h": 105
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "cm-super-56n",
+  "nome": "CM SUPER 56N",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 770.0,
+    "l": 190,
+    "p": 150,
+    "h": 108
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "ft-560-sn",
+  "nome": "FT 560 SN",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 740.0,
+    "l": 210,
+    "p": 170,
+    "h": 85
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "cm-super-27",
+  "nome": "CM SUPER 27''",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 580.0,
+    "l": 148,
+    "p": 140,
+    "h": 102
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "ft-26-sn",
+  "nome": "FT 26 SN",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 600.0,
+    "l": 220,
+    "p": 170,
+    "h": 110
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "tms-26",
+  "nome": "TMS 26",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 462.0,
+    "l": 110,
+    "p": 116,
+    "h": 140
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "generatore-tms-26",
+  "nome": "GENERATORE TMS 26",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "a vista",
+    "kg": 450.0,
+    "l": 130,
+    "p": 130,
+    "h": 180
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "kit-vettura-tms-26-cod-20100380",
+  "nome": "KIT VETTURA TMS 26 cod. 20100380",
+  "categoria": "Smontagomme truck",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 28.0,
+    "l": 70,
+    "p": 40,
+    "h": 36
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "booster-20lt",
+  "nome": "BOOSTER 20LT",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 11.0,
+    "l": 57,
+    "p": 30,
+    "h": 35
+   }
+  ],
+  "corriere": true,
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "wr-328a",
+  "nome": "WR 328A",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 92.0,
+    "l": 96,
+    "p": 69,
+    "h": 133
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "accessori-standard-wr-328a",
+  "nome": "ACCESSORI STANDARD WR 328A",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 50.0,
+    "l": 70,
+    "p": 107,
+    "h": 75
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "geo-10",
+  "nome": "GEO 10",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 96.0,
+    "l": 96,
+    "p": 69,
+    "h": 133
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "accessori-standard-geo-10",
+  "nome": "ACCESSORI STANDARD GEO 10",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 77.0,
+    "l": 115,
+    "p": 90,
+    "h": 103
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "cavalletto-di-taratura-geo-10-wr-328a-cod-23100260",
+  "nome": "CAVALLETTO DI TARATURA GEO 10 - WR 328A cod. 23100260",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 30.0,
+    "l": 73,
+    "p": 54,
+    "h": 107
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "geo-20",
+  "nome": "GEO 20",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 120.0,
+    "l": 289,
+    "p": 72,
+    "h": 48
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "accessori-standard-geo-20",
+  "nome": "ACCESSORI STANDARD GEO 20",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 125.0,
+    "l": 106,
+    "p": 72,
+    "h": 73
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "accessori-standard-geo-20",
+  "nome": "ACCESSORI STANDARD GEO 20",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 85.0,
+    "l": 106,
+    "p": 72,
+    "h": 73
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "up-down-system-per-geo-20-cod-23100411",
+  "nome": "UP & DOWN SYSTEM PER GEO 20 cod. 23100411",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 40.0,
+    "l": 265,
+    "p": 30,
+    "h": 30
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026",
+  "preventivo": true
+ },
+ {
+  "id": "set-2-pezzi-carrelli-porta-griffe-e-target-cod-23100335",
+  "nome": "SET 2 PEZZI CARRELLI PORTA GRIFFE E TARGET cod. 23100335",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 67.0,
+    "l": 125,
+    "p": 50,
+    "h": 40
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "geo-25-mobile-cod-03100103",
+  "nome": "GEO 25 MOBILE cod. 03100103",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 70.0,
+    "l": 106,
+    "p": 72,
+    "h": 73
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "geo-25-mobile-griffe-3-punti-cod-03100104",
+  "nome": "GEO 25 MOBILE+GRIFFE 3 PUNTI cod. 03100104",
+  "categoria": "Assetti ruote",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 65.0,
+    "l": 106,
+    "p": 72,
+    "h": 73
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "set-4-cavalletti-cod-25100306",
+  "nome": "SET 4 CAVALLETTI cod. 25100306",
+  "categoria": "Accessori sollevatori",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 395.0,
+    "l": 154,
+    "p": 113,
+    "h": 72
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "l-3400",
+  "nome": "L 3400",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 1071.0,
+    "l": 170,
+    "p": 85,
+    "h": 105
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "l-3500n-evo",
+  "nome": "L 3500N EVO",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 950.0,
+    "l": 170,
+    "p": 80,
+    "h": 85
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "l-3300-l-3300-evo",
+  "nome": "L 3300 / L 3300 EVO",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 731.0,
+    "l": 160,
+    "p": 80,
+    "h": 100
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "l-3100",
+  "nome": "L 3100",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 605.0,
+    "l": 160,
+    "p": 80,
+    "h": 110
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "l-1500a",
+  "nome": "L 1500A",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista",
+    "kg": 700.0,
+    "l": 210,
+    "p": 107,
+    "h": 86
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "l-96-pe-bike-pompa-a-pedale",
+  "nome": "L 96 PE BIKE + pompa a pedale",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 140.0,
+    "l": 220,
+    "p": 75,
+    "h": 30
+   },
+   {
+    "imballo": "crt",
+    "kg": 8,
+    "l": 60,
+    "p": 20,
+    "h": 30
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "l-96-el-bike-centralina",
+  "nome": "L 96 EL BIKE + centralina",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 165.0,
+    "l": 220,
+    "p": 75,
+    "h": 30
+   },
+   {
+    "imballo": "a vista su plt",
+    "kg": 37,
+    "l": 60,
+    "p": 40,
+    "h": 100
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "al-40",
+  "nome": "AL 40",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista",
+    "kg": 648.0,
+    "l": 290,
+    "p": 45,
+    "h": 105
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "alb-40",
+  "nome": "ALB 40",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista",
+    "kg": 880.0,
+    "l": 290,
+    "p": 45,
+    "h": 120
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "al-55",
+  "nome": "AL 55",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista",
+    "kg": 1072.0,
+    "l": 410,
+    "p": 120,
+    "h": 70
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure 2026",
+  "preventivo": true
+ },
+ {
+  "id": "set-4-rampe-ribassate-cod-25100289",
+  "nome": "SET 4 RAMPE RIBASSATE cod. 25100289",
+  "categoria": "Accessori sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 127.0,
+    "l": 110,
+    "p": 78,
+    "h": 40
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "traversa-di-sollevamento-cod-25100288",
+  "nome": "TRAVERSA DI SOLLEVAMENTO cod. 25100288",
+  "categoria": "Accessori sollevatori",
+  "colli": [
+   {
+    "imballo": "crt on plt",
+    "kg": 72.0,
+    "l": 165,
+    "p": 50,
+    "h": 44
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "jb25-traversa-pneumatica-cod-25100290",
+  "nome": "JB25 TRAVERSA PNEUMATICA cod. 25100290",
+  "categoria": "Accessori sollevatori",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 145.0,
+    "l": 85,
+    "p": 60,
+    "h": 32
+   }
+  ],
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "nic-20",
+  "nome": "NIC 20",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 97.0,
+    "l": 68,
+    "p": 72,
+    "h": 163
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "nil-50",
+  "nome": "NIL 50",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 110.0,
+    "l": 66,
+    "p": 73,
+    "h": 158
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "nit-18",
+  "nome": "NIT 18",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 80.0,
+    "l": 65,
+    "p": 74,
+    "h": 158
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "art-2019-k",
+  "nome": "ART 2019/K",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 42.0,
+    "l": 173,
+    "p": 65,
+    "h": 50
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "secure-cage",
+  "nome": "SECURE CAGE",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "a vista su plt",
+    "kg": 190.0,
+    "l": 160,
+    "p": 80,
+    "h": 170
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "ge-23-electronic-tyre-inflator",
+  "nome": "GE 23 ELECTRONIC TYRE INFLATOR",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 8.0,
+    "l": 31,
+    "p": 30,
+    "h": 22
+   }
+  ],
+  "corriere": true,
+  "fonte": "Prospetto pesi e misure 2026",
+  "soloPallet": true
+ },
+ {
+  "id": "sollevatore-oleopneumatico-opj30",
+  "nome": "SOLLEVATORE OLEOPNEUMATICO OPJ30",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 50.0,
+    "l": 140,
+    "p": 80,
+    "h": 40
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "sollevatore-oleopneumatico-opj40",
+  "nome": "SOLLEVATORE OLEOPNEUMATICO OPJ40",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 65.0,
+    "l": 140,
+    "p": 80,
+    "h": 40
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "sollevatore-oleopneumatico-opj50",
+  "nome": "SOLLEVATORE OLEOPNEUMATICO OPJ50",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 70.0,
+    "l": 140,
+    "p": 80,
+    "h": 45
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "sollevatore-oleopneumatico-opj60",
+  "nome": "SOLLEVATORE OLEOPNEUMATICO OPJ60",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 85.0,
+    "l": 140,
+    "p": 80,
+    "h": 40
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "pressa-idraulica-ps15",
+  "nome": "PRESSA IDRAULICA PS15",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 70.0,
+    "l": 120,
+    "p": 80,
+    "h": 40
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "pressa-idraulica-ps30",
+  "nome": "PRESSA IDRAULICA PS30",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 150.0,
+    "l": 160,
+    "p": 80,
+    "h": 45
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "pressa-idraulica-ps50",
+  "nome": "PRESSA IDRAULICA PS50",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 275.5,
+    "l": 183,
+    "p": 101,
+    "h": 40
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "gru-idraulica-a-carrello-gc10",
+  "nome": "GRU IDRAULICA A CARRELLO GC10",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 117.0,
+    "l": 160,
+    "p": 80,
+    "h": 40
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "sollevatore-da-fossa-sf-600",
+  "nome": "SOLLEVATORE DA FOSSA SF 600",
+  "categoria": "Attrezzatura d'officina",
+  "colli": [
+   {
+    "imballo": "crt su plt",
+    "kg": 46.0,
+    "l": 120,
+    "p": 80,
+    "h": 40
+   }
+  ],
+  "soloPallet": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "wl-85-move",
+  "nome": "WL 85 MOVE",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista",
+    "kg": 203.8,
+    "l": 115,
+    "p": 145,
+    "h": 248,
+    "n": 4
+   }
+  ],
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "pfa-40",
+  "nome": "PFA 40",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista",
+    "kg": 1270,
+    "l": 480,
+    "p": 60,
+    "h": 34,
+    "n": 2
+   },
+   {
+    "imballo": "plt",
+    "kg": 0,
+    "l": 160,
+    "p": 85,
+    "h": 80
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "nota": "peso lordo totale 2.540 kg",
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "pfa-50",
+  "nome": "PFA 50",
+  "categoria": "Sollevatori",
+  "colli": [
+   {
+    "imballo": "a vista",
+    "kg": 1315,
+    "l": 520,
+    "p": 60,
+    "h": 34,
+    "n": 2
+   },
+   {
+    "imballo": "plt",
+    "kg": 0,
+    "l": 160,
+    "p": 85,
+    "h": 80
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "nota": "peso lordo totale 2.630 kg",
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "mtb",
+  "nome": "MTB",
+  "categoria": "Altri articoli",
+  "colli": [],
+  "nota": "20 kg, misure imballo non disponibili",
+  "daQuotare": true,
+  "fonte": "Prospetto pesi e misure 2026"
+ },
+ {
+  "id": "c-3-2",
+  "nome": "C 3.2",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 500,
+    "l": 251,
+    "p": 67,
+    "h": 58
+   },
+   {
+    "imballo": "a vista",
+    "kg": 80,
+    "l": 217,
+    "p": 140,
+    "h": 6
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-3-2s",
+  "nome": "C 3.2S",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 577,
+    "l": 251,
+    "p": 67,
+    "h": 61
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-3-5",
+  "nome": "C 3.5",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 593,
+    "l": 255,
+    "p": 76,
+    "h": 59
+   },
+   {
+    "imballo": "a vista",
+    "kg": 113,
+    "l": 325,
+    "p": 148,
+    "h": 6
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-3-5s",
+  "nome": "C 3.5S",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 658,
+    "l": 255,
+    "p": 76,
+    "h": 59
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-4",
+  "nome": "C 4",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 673,
+    "l": 255,
+    "p": 76,
+    "h": 59
+   },
+   {
+    "imballo": "a vista",
+    "kg": 113,
+    "l": 325,
+    "p": 148,
+    "h": 6
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-4-xl",
+  "nome": "C 4 XL",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 673,
+    "l": 255,
+    "p": 76,
+    "h": 59
+   },
+   {
+    "imballo": "a vista",
+    "kg": 113,
+    "l": 325,
+    "p": 148,
+    "h": 6
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-4s",
+  "nome": "C 4S",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 738,
+    "l": 255,
+    "p": 76,
+    "h": 59
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-4s-xl",
+  "nome": "C 4S XL",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 738,
+    "l": 255,
+    "p": 76,
+    "h": 59
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-5",
+  "nome": "C 5",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 535,
+    "l": 269,
+    "p": 89,
+    "h": 65,
+    "n": 2
+   },
+   {
+    "imballo": "a vista",
+    "kg": 155,
+    "l": 45,
+    "p": 170,
+    "h": 6
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-5-5",
+  "nome": "C 5.5",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 535,
+    "l": 269,
+    "p": 89,
+    "h": 65,
+    "n": 2
+   },
+   {
+    "imballo": "a vista",
+    "kg": 155,
+    "l": 45,
+    "p": 170,
+    "h": 6
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-5s",
+  "nome": "C 5S",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 535,
+    "l": 269,
+    "p": 89,
+    "h": 65,
+    "n": 2
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-5-5s",
+  "nome": "C 5.5S",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 535,
+    "l": 269,
+    "p": 89,
+    "h": 65,
+    "n": 2
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-125",
+  "nome": "C 125",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 534,
+    "l": 266,
+    "p": 78,
+    "h": 70
+   },
+   {
+    "imballo": "a vista",
+    "kg": 75,
+    "l": 160,
+    "p": 149,
+    "h": 10
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-445",
+  "nome": "C 445",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 505,
+    "l": 318,
+    "p": 113,
+    "h": 43
+   },
+   {
+    "imballo": "a vista",
+    "kg": 950,
+    "l": 484,
+    "p": 67,
+    "h": 40
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-445-h",
+  "nome": "C 445 H",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 550,
+    "l": 318,
+    "p": 113,
+    "h": 43
+   },
+   {
+    "imballo": "a vista",
+    "kg": 1320,
+    "l": 484,
+    "p": 67,
+    "h": 40
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-450-xl",
+  "nome": "C 450 XL",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 600,
+    "l": 340,
+    "p": 115,
+    "h": 44
+   },
+   {
+    "imballo": "a vista",
+    "kg": 780,
+    "l": 570,
+    "p": 57,
+    "h": 40
+   }
+  ],
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "c-430",
+  "nome": "C 430",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 400,
+    "l": 301,
+    "p": 113,
+    "h": 43
+   },
+   {
+    "imballo": "a vista",
+    "kg": 300,
+    "l": 415,
+    "p": 49,
+    "h": 33
+   }
+  ],
+  "noSponda": true,
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "kit-eva",
+  "nome": "KIT EVA",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "cassa",
+    "kg": 211,
+    "l": 123,
+    "p": 100,
+    "h": 43
+   }
+  ],
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "traversa-tv2600h",
+  "nome": "TRAVERSA TV2600H",
+  "categoria": "Sollevatori Cascos",
+  "colli": [
+   {
+    "imballo": "crt",
+    "kg": 60,
+    "l": 44,
+    "p": 31,
+    "h": 27
+   },
+   {
+    "imballo": "a vista",
+    "kg": 60,
+    "l": 80,
+    "p": 60,
+    "h": 10
+   }
+  ],
+  "fonte": "Prospetto pesi e misure Cascos 2026"
+ },
+ {
+  "id": "mec-mec-820vdl-sonar-mec-820vdl-sonar",
+  "nome": "MEC 820VDL SONAR",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 181.0,
+  "misure": [
+   96.0,
+   69.0,
+   160.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "mec-mec-820vdl-p-sonar-mec-820vdl-p-sonar",
+  "nome": "MEC 820VDL-P SONAR",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 189.0,
+  "misure": [
+   96.0,
+   69.0,
+   160.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "mec-mec-820-vdll-p-sonar-c-cod-21100399-soll-automat-mec-820-vdll-p-sonar-c-cod-21100399-soll-automat",
+  "nome": "MEC 820 VDLL-P SONAR ( c/cod. 21100399 SOLL. AUTOMAT.)",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM + 10%",
+  "kg": 245.0,
+  "misure": [
+   160.0,
+   75.0,
+   153.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "mec-mec-810vd-mec-810vd",
+  "nome": "MEC 810VD",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 142.0,
+  "misure": [
+   96.0,
+   69.0,
+   160.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "mec-mec-810vdb-mec-810vdbl-mec-810vdb-mec-810vdbl",
+  "nome": "MEC 810VDB / MEC 810VDBL",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 146.0,
+  "misure": [
+   96.0,
+   69.0,
+   160.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "mec-mec-20-mec-20l-sonar-mec-20-mec-20l-sonar",
+  "nome": "MEC 20 / MEC 20L SONAR",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 171.0,
+  "misure": [
+   96.0,
+   80.0,
+   135.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "mec-mec-20l-p-sonar-mec-20l-p-sonar",
+  "nome": "MEC 20L-P SONAR",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 179.0,
+  "misure": [
+   96.0,
+   80.0,
+   135.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "mec-mec-10bl-mec-10bl",
+  "nome": "MEC 10BL",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 140.0,
+  "misure": [
+   96.0,
+   80.0,
+   135.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "mec-mec-5-mec-5",
+  "nome": "MEC 5",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 137.0,
+  "misure": [
+   96.0,
+   80.0,
+   135.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-536s-gt-racing-braccio-f-536s-gt-racing-braccio",
+  "nome": "F 536S GT RACING + BRACCIO",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": null,
+  "misure": [
+   110.0,
+   115.0,
+   190.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-535s-braccio-f-535s-braccio",
+  "nome": "F 535S + BRACCIO",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": null,
+  "misure": [
+   110.0,
+   90.0,
+   175.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-535s-gt-f-535s-gt",
+  "nome": "F 535S GT",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT + 10%",
+  "kg": 260.0,
+  "misure": [
+   140.0,
+   92.0,
+   175.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-535s-gt-braccio-f-535s-gt-braccio",
+  "nome": "F 535S GT + BRACCIO",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT + 10%",
+  "kg": null,
+  "misure": [
+   135.0,
+   90.0,
+   170.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-535s-gt-leverless-f-535s-gt-leverless",
+  "nome": "F 535S GT LEVERLESS",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT + 10%",
+  "kg": 272.0,
+  "misure": [
+   140.0,
+   92.0,
+   175.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-535s-gt-leverless-braccio-f-535s-gt-leverless-braccio",
+  "nome": "F 535S GT LEVERLESS + BRACCIO",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT + 10%",
+  "kg": null,
+  "misure": [
+   135.0,
+   90.0,
+   170.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-524s-f-524s",
+  "nome": "F 524S",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 222.0,
+  "misure": [
+   97.0,
+   75.0,
+   163.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-524s-multi-system-f-524s-multi-system",
+  "nome": "F 524S + MULTI SYSTEM",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 303.0,
+  "misure": [
+   105.0,
+   92.0,
+   171.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-524s-rf-system-f-524s-rf-system",
+  "nome": "F 524S + RF SYSTEM",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 313.0,
+  "misure": [
+   105.0,
+   92.0,
+   171.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-524s-gt-f-524s-gt",
+  "nome": "F 524S GT",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 233.0,
+  "misure": [
+   120.0,
+   85.0,
+   163.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-524s-gt-rf-system-f-524s-gt-rf-system",
+  "nome": "F 524S GT + RF SYSTEM",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 324.0,
+  "misure": [
+   120.0,
+   85.0,
+   163.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-524sw-f-524sw",
+  "nome": "F 524SW",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM",
+  "kg": 202.0,
+  "misure": [
+   96.0,
+   85.0,
+   158.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "basic-22-bike-basic-22-bike",
+  "nome": "BASIC 22 BIKE",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 192.0,
+  "misure": [
+   108.0,
+   76.0,
+   165.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "basic-124-basic-124",
+  "nome": "BASIC 124",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 203.0,
+  "misure": [
+   112.0,
+   90.0,
+   170.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "basic-224-basic-224",
+  "nome": "BASIC 224",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 261.0,
+  "misure": [
+   115.0,
+   87.0,
+   163.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "basic-224-helper-basic-224-helper",
+  "nome": "BASIC 224 + HELPER",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 320.0,
+  "misure": [
+   115.0,
+   87.0,
+   175.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-470s-gt-f-470s-gt",
+  "nome": "F 470S GT",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "HALF",
+  "kg": 301.0,
+  "misure": [
+   130.0,
+   97.0,
+   180.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "f-470s-gt-rf-system-f-470s-gt-rf-system",
+  "nome": "F 470S GT + RF SYSTEM",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 395.0,
+  "misure": [
+   130.0,
+   97.0,
+   180.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "basic-helper-arm-basic-helper-arm",
+  "nome": "BASIC HELPER ARM",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "QUARTER",
+  "kg": 83.0,
+  "misure": [
+   132.0,
+   42.0,
+   45.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "sx-plus-system-sx-plus-system",
+  "nome": "SX PLUS SYSTEM",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "QUARTER",
+  "kg": 75.0,
+  "misure": [
+   100.0,
+   37.0,
+   32.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "serbatoio-gt-serbatoio-gt",
+  "nome": "SERBATOIO GT",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 10.0,
+  "misure": [
+   62.0,
+   30.0,
+   30.0
+  ],
+  "corriere": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "pedana-pneumatica-di-sollevamento-cod-20100297-pedana-pneumatica-di-sollevamento-cod-20100297",
+  "nome": "PEDANA PNEUMATICA DI SOLLEVAMENTO cod. 20100297",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 44.0,
+  "misure": [
+   85.0,
+   65.0,
+   35.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "ft-600-hy-ft-600-hy",
+  "nome": "FT 600 HY",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "FULL",
+  "kg": 2460.0,
+  "misure": [
+   299.0,
+   229.0,
+   133.0
+  ],
+  "groupage": {
+   "ml": 3.0,
+   "quintali": 24.6,
+   "bancali": 1
+  },
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "l-3500-evo-l-3500-evo",
+  "nome": "L 3500 EVO",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEGA + 10%",
+  "kg": 1070.0,
+  "misure": [
+   168.0,
+   80.0,
+   100.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "telaio-l3300evo-zb-cod-41200903z31-telaio-l3300evo-zb-cod-41200903z31",
+  "nome": "TELAIO L3300EVO ZB cod. 41200903Z31",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 54.0,
+  "misure": [
+   80.0,
+   60.0,
+   40.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "l-40-l-40",
+  "nome": "L 40",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "FULL",
+  "kg": 625.0,
+  "misure": [
+   290.0,
+   50.0,
+   100.0
+  ],
+  "groupage": {
+   "ml": 3.0,
+   "quintali": 6.25,
+   "bancali": 1
+  },
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "l-45-l-45",
+  "nome": "L 45",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "FULL",
+  "kg": 750.0,
+  "misure": [
+   380.0,
+   50.0,
+   100.0
+  ],
+  "groupage": {
+   "ml": 4.0,
+   "quintali": 7.5,
+   "bancali": 1
+  },
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "kit-estensione-cod-25100303-kit-estensione-cod-25100303",
+  "nome": "KIT ESTENSIONE cod. 25100303",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "QUARTER",
+  "kg": 95.0,
+  "misure": [
+   134.0,
+   50.0,
+   40.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "pompa-emergenza-cod-25200341-pompa-emergenza-cod-25200341",
+  "nome": "POMPA EMERGENZA cod. 25200341",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 0.5,
+  "misure": [
+   44.0,
+   27.0,
+   23.0
+  ],
+  "corriere": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "alpha-40-cod-05100357-alpha-40-cod-05100357",
+  "nome": "ALPHA 40 cod. 05100357",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "FULL",
+  "kg": 626.0,
+  "misure": [
+   287.0,
+   45.0,
+   77.0
+  ],
+  "groupage": {
+   "ml": 3.0,
+   "quintali": 6.26,
+   "bancali": 1
+  },
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "sigma-300e-cod-05100381-sigma-300e-cod-05100381",
+  "nome": "SIGMA 300E cod. 05100381",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "FULL + 10%",
+  "kg": 850.0,
+  "misure": [
+   170.0,
+   80.0,
+   85.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "geo-10-accessori-geo-10-geo-10-accessori-geo-10",
+  "nome": "GEO 10 ACCESSORI GEO 10",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "FULL",
+  "kg": 96.0,
+  "misure": [
+   96.0,
+   69.0,
+   133.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "taratore-geo-10-taratore-geo-10",
+  "nome": "TARATORE GEO 10",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "HALF",
+  "kg": 30.0,
+  "misure": [
+   76.0,
+   54.0,
+   107.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "geo-20-accessori-accessori-geo-20-accessori-accessori",
+  "nome": "GEO 20 ACCESSORI ACCESSORI",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "FULL",
+  "kg": 120.0,
+  "misure": [
+   289.0,
+   72.0,
+   48.0
+  ],
+  "groupage": {
+   "ml": 3.0,
+   "quintali": 1.2,
+   "bancali": 1
+  },
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "geo-15-geo-15",
+  "nome": "GEO 15",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "HALF",
+  "kg": 50.0,
+  "misure": [
+   284.0,
+   40.0,
+   27.0
+  ],
+  "groupage": {
+   "ml": 3.0,
+   "quintali": 0.5,
+   "bancali": 1
+  },
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "kit-sali-scendi-geo-15-cod-23100385-kit-sali-scendi-geo-15-cod-23100385",
+  "nome": "KIT SALI/SCENDI GEO 15 cod. 23100385",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "FULL",
+  "kg": 25.0,
+  "misure": [
+   202.0,
+   24.0,
+   20.0
+  ],
+  "groupage": {
+   "ml": 3.0,
+   "quintali": 0.25,
+   "bancali": 1
+  },
+  "noSponda": true,
+  "preventivo": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "taratore-geo-15-taratore-geo-15",
+  "nome": "TARATORE GEO 15",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "HALF",
+  "kg": 30.0,
+  "misure": [
+   73.0,
+   54.0,
+   107.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "kit-integrazione-taratore-geo-15-kit-integrazione-taratore-geo-15",
+  "nome": "KIT INTEGRAZIONE TARATORE GEO 15",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 6.0,
+  "misure": [
+   34.0,
+   34.0,
+   37.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "target-geo-15-target-geo-15",
+  "nome": "TARGET GEO 15",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 64.0,
+  "misure": [
+   120.0,
+   80.0,
+   48.0
+  ],
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "target-anteriore-geo-15-cod-23200278-target-anteriore-geo-15-cod-23200278",
+  "nome": "TARGET ANTERIORE GEO 15 cod. 23200278",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 2.5,
+  "misure": [
+   40.0,
+   40.0,
+   20.0
+  ],
+  "corriere": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "scm-230-scm-230",
+  "nome": "SCM 230",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "QUARTER",
+  "kg": 59.0,
+  "misure": [
+   135.0,
+   40.0,
+   40.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "scm-3-scm-3",
+  "nome": "SCM 3",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "QUARTER",
+  "kg": 97.0,
+  "misure": [
+   135.0,
+   40.0,
+   40.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "scm-4eb-scm-4eb",
+  "nome": "SCM 4EB",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "QUARTER",
+  "kg": 114.0,
+  "misure": [
+   135.0,
+   40.0,
+   40.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "scm-476-scm-476",
+  "nome": "SCM 476",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "QUARTER",
+  "kg": 114.0,
+  "misure": [
+   135.0,
+   40.0,
+   40.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "scm-9-scm-9",
+  "nome": "SCM 9",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "QUARTER",
+  "kg": 85.0,
+  "misure": [
+   140.0,
+   40.0,
+   50.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "sollevatore-pneum-mobile-tj2-cod-06200038-sollevatore-pneum-mobile-tj2-cod-06200038",
+  "nome": "SOLLEVATORE PNEUM. MOBILE TJ2 cod. 06200038",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 45.0,
+  "misure": [
+   120.0,
+   80.0,
+   40.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "sollevatore-pneum-mobile-tj3n-cod-06200042-sollevatore-pneum-mobile-tj3n-cod-06200042",
+  "nome": "SOLLEVATORE PNEUM. MOBILE TJ3N cod. 06200042",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 53.0,
+  "misure": [
+   120.0,
+   80.0,
+   40.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "sollevatore-pneum-mobile-tj2-tel-cod-06200041-sollevatore-pneum-mobile-tj2-tel-cod-06200041",
+  "nome": "SOLLEVATORE PNEUM. MOBILE TJ2-TEL cod. 06200041",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 53.0,
+  "misure": [
+   120.0,
+   80.0,
+   40.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "booster-40lt-booster-40lt",
+  "nome": "BOOSTER 40LT",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MINI",
+  "kg": 21.0,
+  "misure": [
+   75.0,
+   38.0,
+   50.0
+  ],
+  "corriere": true,
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "sa-1200-sa-1200",
+  "nome": "SA 1200",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 70.0,
+  "misure": [
+   75.0,
+   75.0,
+   180.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "sa-2500-sa-2500",
+  "nome": "SA 2500",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "LIGHT",
+  "kg": 71.0,
+  "misure": [
+   75.0,
+   75.0,
+   180.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ },
+ {
+  "id": "vl-22-vasca-d-ispezione-cod-10100031-vl-22-vasca-d-ispezione-cod-10100031",
+  "nome": "VL 22 VASCA D'ISPEZIONE cod. 10100031",
+  "categoria": "Fuori prospetto 2026",
+  "pallet": "MEDIUM + 30%",
+  "kg": 290.0,
+  "misure": [
+   150.0,
+   95.0,
+   125.0
+  ],
+  "soloPallet": true,
+  "fonte": "Catalogo precedente"
+ }
+]

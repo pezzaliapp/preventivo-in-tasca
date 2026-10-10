@@ -1,0 +1,13 @@
+{
+  "name": "preventivo-in-tasca",
+  "private": true,
+  "description": "Preventivo in tasca — Alessandro Pezzali. Nessuna dipendenza a runtime. playwright-core (solo sviluppo, versione legata al Chromium 1234 già installato) serve alle verifiche visive in tests/e2e.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3",
+    "playwright-core": "1.62.0"
+  }
+}

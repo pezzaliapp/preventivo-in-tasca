@@ -1,0 +1,80 @@
+/* Preventivo in tasca — sistema di design unico.
+   Grigio cemento d'officina, inchiostro ardesia, giallo segnaletica come accento.
+   Il rosso è riservato a errori ed eliminazioni. Contrasti verificati in tests/design.test.js. */
+
+/* ---------- Font ospitati nell'app (funzionano offline, licenza OFL in fonts/) ---------- */
+@font-face { font-family: "Barlow"; src: url(../fonts/barlow-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url(../fonts/barlow-latin-500-normal.woff2) format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url(../fonts/barlow-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url(../fonts/barlow-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url(../fonts/barlow-condensed-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url(../fonts/barlow-condensed-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+
+:root {
+  /* superfici e testo */
+  --paper: #EDF0F2;
+  --card: #FFFFFF;
+  --field: #F7F9FA;
+  --ink: #18222B;
+  --muted: #4F5E6B;
+  --line: #D2D9DE;
+  --line-strong: #7A8995;      /* bordi dei campi: almeno 3:1 sullo sfondo */
+  /* accento unico */
+  --accent: #FFC20E;
+  --accent-press: #E8AE00;
+  --on-accent: #18222B;
+  --accent-soft: #FFF3CC;
+  /* stati */
+  --danger: #B3261E;
+  --danger-soft: #FBE9E7;
+  --ok: #24693F;
+  --ok-soft: #E4F2EA;
+  --warn: #7A4F00;
+  --warn-soft: #FFF4DC;
+  --info: #2D5C7F;
+  --info-soft: #E6EEF4;
+  --focus: #1D5FD1;
+  /* barra superiore e laterale: sempre scura, come il listino */
+  --bar: #18222B;
+  --on-bar: #FFFFFF;
+  --on-bar-muted: #B8C4CC;
+
+  /* misure */
+  --font: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-cond: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", var(--font);
+  --testo: 1.0625rem;          /* 17 px */
+  --testo-piccolo: 0.9375rem;  /* 15 px */
+  --tocco: 48px;
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --ombra: 0 1px 0 rgba(24, 34, 43, .04), 0 12px 32px -18px rgba(24, 34, 43, .35);
+  --barra-basso: 64px;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+  color-scheme: light;
+}
+
+/* Tema scuro: automatico, salvo scelta "chiaro" nelle impostazioni */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #11171C; --card: #1A232A; --field: #141B21; --ink: #E7ECEF; --muted: #A3B1BC;
+    --line: #2A3740; --line-strong: #6B7C88;
+    --accent-soft: #3A3218; --danger: #FF8A75; --danger-soft: #3A2320; --ok: #7CCB9B; --ok-soft: #1B2E24;
+    --warn: #F0B44C; --warn-soft: #2E2413; --info: #8DBBE0; --info-soft: #1C2B36; --focus: #6EA2FF;
+    --bar: #0E1418; --on-bar-muted: #A3B1BC;
+    --ombra: 0 18px 40px -24px rgba(0, 0, 0, .8);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #11171C; --card: #1A232A; --field: #141B21; --ink: #E7ECEF; --muted: #A3B1BC;
+  --line: #2A3740; --line-strong: #6B7C88;
+  --accent-soft: #3A3218; --danger: #FF8A75; --danger-soft: #3A2320; --ok: #7CCB9B; --ok-soft: #1B2E24;
+  --warn: #F0B44C; --warn-soft: #2E2413; --info: #8DBBE0; --info-soft: #1C2B36; --focus: #6EA2FF;
+  --bar: #0E1418; --on-bar-muted: #A3B1BC;
+  --ombra: 0 18px 40px -24px rgba(0, 0, 0, .8);
+  color-scheme: dark;
+}

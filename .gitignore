@@ -19,3 +19,9 @@ Thumbs.db
 .vscode/
 .idea/
 node_modules/
+
+# File di prova creati dagli script di verifica
+tests/e2e/.prova-*
+
+# Python
+__pycache__/

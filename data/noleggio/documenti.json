@@ -1,0 +1,21 @@
+{
+  "_leggimi": "Kit documenti BCC del noleggio operativo. I PDF stanno in data/noleggio/documenti/. Per un kit nuovo: sostituire i file, aggiornare questo elenco e la data, e la lista offline in sw.js.",
+  "titolo": "Documenti BCC Rent&Lease",
+  "aggiornato": "2026-10-10",
+  "nota": "Kit Noleggio Operativo aggiornato al 10.10.2026: moduli per la pratica di noleggio operativo.",
+  "documenti": [
+    { "file": "Domanda_NOLEGGIO.pdf", "titolo": "Domanda di noleggio", "icona": "📋" },
+    { "file": "Modulo_firma_digitale.pdf", "titolo": "Modulo firma digitale", "icona": "✍️" },
+    { "file": "Privacy_-_Attestazione_avvenuta_consegna.pdf", "titolo": "Privacy – Attestazione consegna", "icona": "🔒" },
+    { "file": "Scheda_prodotto_NOLEGGIO.pdf", "titolo": "Scheda prodotto noleggio", "icona": "📑" },
+    { "file": "Estratto_Lettera_di_Assicurazione.pdf", "titolo": "Estratto lettera di assicurazione", "icona": "🛡️" },
+    { "file": "Kit_di_benvenuto_Locazione_Operativa.pdf", "titolo": "Kit di benvenuto locazione operativa", "nota": "Da lasciare al cliente", "icona": "🎁" }
+  ],
+  "oltre50mila": {
+    "titolo": "Richieste superiori a 50.000 € — documentazione aggiuntiva",
+    "soglia": 50000,
+    "documenti": [
+      { "file": "Fascicolo_antiriciclaggio_oltre_50K.pdf", "titolo": "Fascicolo antiriciclaggio", "nota": "Da compilare e firmare: cliente e fornitore", "icona": "🏦" }
+    ]
+  }
+}

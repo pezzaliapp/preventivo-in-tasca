@@ -1,0 +1,8 @@
+{
+  "_leggimi": "Colli sovrapponibili nel groupage (passo Consegna, interruttore spento di base). Nei listini dei trasportatori non c'è una regola: questi valori li ha decisi Alessandro (10/10/2026). Quali articoli sono sovrapponibili si decide in articoli.json con \"sovrapponibile\": true.",
+  "livelliMassimi": 2,
+  "altezzaMassimaCm": 240,
+  "altezzaMassimaFonte": "Altezza massima dei pallet nelle tariffe (LIGHT, LARGE, FULL, BIG, MEGA: 240 cm)",
+  "bancali": "invariati",
+  "bancaliNota": "I bancali si contano come senza impilare (nessuna riduzione); il peso non cambia."
+}

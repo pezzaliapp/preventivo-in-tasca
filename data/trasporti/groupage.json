@@ -1,0 +1,904 @@
+{
+ "versione": 2,
+ "zone": [
+  {
+   "zona": "GROUPAGE NORD - CENTRO",
+   "fasce": {
+    "ml": [
+     3.0,
+     4.0,
+     5.0,
+     6.0
+    ],
+    "bancali": [
+     7.0,
+     10.0,
+     13.0,
+     16.0
+    ],
+    "quintali": [
+     40.0,
+     50.0,
+     60.0,
+     70.0
+    ]
+   },
+   "gruppi": [
+    {
+     "regione": "PIEMONTE",
+     "etichetta": "TO BI VB VC",
+     "tutte": false,
+     "province": [
+      "TO",
+      "BI",
+      "VB",
+      "VC"
+     ],
+     "prezzi": [
+      403.0,
+      468.0,
+      539.5,
+      559.0
+     ]
+    },
+    {
+     "regione": "PIEMONTE",
+     "etichetta": "CN",
+     "tutte": false,
+     "province": [
+      "CN"
+     ],
+     "prezzi": [
+      455.0,
+      507.0,
+      565.5,
+      604.5
+     ]
+    },
+    {
+     "regione": "PIEMONTE",
+     "etichetta": "AL NO AT",
+     "tutte": false,
+     "province": [
+      "AL",
+      "NO",
+      "AT"
+     ],
+     "prezzi": [
+      377.0,
+      403.0,
+      429.0,
+      455.0
+     ]
+    },
+    {
+     "regione": "LIGURIA",
+     "etichetta": "GE SP",
+     "tutte": false,
+     "province": [
+      "GE",
+      "SP"
+     ],
+     "prezzi": [
+      429.0,
+      455.0,
+      481.0,
+      507.0
+     ]
+    },
+    {
+     "regione": "LIGURIA",
+     "etichetta": "IM SV",
+     "tutte": false,
+     "province": [
+      "IM",
+      "SV"
+     ],
+     "prezzi": [
+      468.0,
+      533.0,
+      617.5,
+      656.5
+     ]
+    },
+    {
+     "regione": "LOMBARDIA",
+     "etichetta": "MI BG BS PV MN CR MB LO",
+     "tutte": false,
+     "province": [
+      "MI",
+      "BG",
+      "BS",
+      "PV",
+      "MN",
+      "CR",
+      "MB",
+      "LO"
+     ],
+     "prezzi": [
+      279.5,
+      338.0,
+      364.0,
+      390.0
+     ]
+    },
+    {
+     "regione": "LOMBARDIA",
+     "etichetta": "LC VA CO",
+     "tutte": false,
+     "province": [
+      "LC",
+      "VA",
+      "CO"
+     ],
+     "prezzi": [
+      305.5,
+      351.0,
+      377.0,
+      403.0
+     ]
+    },
+    {
+     "regione": "LOMBARDIA",
+     "etichetta": "SO",
+     "tutte": false,
+     "province": [
+      "SO"
+     ],
+     "prezzi": [
+      429.0,
+      481.0,
+      520.0,
+      552.5
+     ]
+    },
+    {
+     "regione": "TRENTINO",
+     "etichetta": "BZ",
+     "tutte": false,
+     "province": [
+      "BZ"
+     ],
+     "prezzi": [
+      481.0,
+      533.0,
+      565.5,
+      591.5
+     ]
+    },
+    {
+     "regione": "TRENTINO",
+     "etichetta": "TN",
+     "tutte": false,
+     "province": [
+      "TN"
+     ],
+     "prezzi": [
+      403.0,
+      416.0,
+      442.0,
+      468.0
+     ]
+    },
+    {
+     "regione": "FRIULI",
+     "etichetta": "UD PN",
+     "tutte": false,
+     "province": [
+      "UD",
+      "PN"
+     ],
+     "prezzi": [
+      429.0,
+      520.0,
+      617.5,
+      656.5
+     ]
+    },
+    {
+     "regione": "FRIULI",
+     "etichetta": "TS GO",
+     "tutte": false,
+     "province": [
+      "TS",
+      "GO"
+     ],
+     "prezzi": [
+      468.0,
+      552.5,
+      630.5,
+      669.5
+     ]
+    },
+    {
+     "regione": "VENETO",
+     "etichetta": "BL",
+     "tutte": false,
+     "province": [
+      "BL"
+     ],
+     "prezzi": [
+      481.0,
+      520.0,
+      578.5,
+      604.5
+     ]
+    },
+    {
+     "regione": "VENETO",
+     "etichetta": "TV VE",
+     "tutte": false,
+     "province": [
+      "TV",
+      "VE"
+     ],
+     "prezzi": [
+      403.0,
+      429.0,
+      442.0,
+      468.0
+     ]
+    },
+    {
+     "regione": "VENETO",
+     "etichetta": "PD VI RO VR",
+     "tutte": false,
+     "province": [
+      "PD",
+      "VI",
+      "RO",
+      "VR"
+     ],
+     "prezzi": [
+      305.5,
+      338.0,
+      364.0,
+      390.0
+     ]
+    },
+    {
+     "regione": "EMILIA R.",
+     "etichetta": "RE PR MO BO",
+     "tutte": false,
+     "province": [
+      "RE",
+      "PR",
+      "MO",
+      "BO"
+     ],
+     "prezzi": [
+      279.5,
+      292.5,
+      325.0,
+      338.0
+     ]
+    },
+    {
+     "regione": "EMILIA R.",
+     "etichetta": "FC RN RA FE PC",
+     "tutte": false,
+     "province": [
+      "FC",
+      "RN",
+      "RA",
+      "FE",
+      "PC"
+     ],
+     "prezzi": [
+      325.0,
+      351.0,
+      364.0,
+      377.0
+     ]
+    },
+    {
+     "regione": "TOSCANA",
+     "etichetta": "FI PO PT LU PI MS",
+     "tutte": false,
+     "province": [
+      "FI",
+      "PO",
+      "PT",
+      "LU",
+      "PI",
+      "MS"
+     ],
+     "prezzi": [
+      377.0,
+      403.0,
+      429.0,
+      455.0
+     ]
+    },
+    {
+     "regione": "TOSCANA",
+     "etichetta": "AR SI LI",
+     "tutte": false,
+     "province": [
+      "AR",
+      "SI",
+      "LI"
+     ],
+     "prezzi": [
+      390.0,
+      429.0,
+      455.0,
+      494.0
+     ]
+    },
+    {
+     "regione": "TOSCANA",
+     "etichetta": "GR",
+     "tutte": false,
+     "province": [
+      "GR"
+     ],
+     "prezzi": [
+      494.0,
+      526.5,
+      578.5,
+      604.5
+     ]
+    },
+    {
+     "regione": "MARCHE",
+     "etichetta": "PU AN",
+     "tutte": false,
+     "province": [
+      "PU",
+      "AN"
+     ],
+     "prezzi": [
+      403.0,
+      442.0,
+      494.0,
+      526.5
+     ]
+    },
+    {
+     "regione": "MARCHE",
+     "etichetta": "MC AP FM",
+     "tutte": false,
+     "province": [
+      "MC",
+      "AP",
+      "FM"
+     ],
+     "prezzi": [
+      468.0,
+      546.0,
+      604.5,
+      656.5
+     ]
+    },
+    {
+     "regione": "UMBRIA",
+     "etichetta": "PG",
+     "tutte": false,
+     "province": [
+      "PG"
+     ],
+     "prezzi": [
+      455.0,
+      507.0,
+      578.5,
+      630.5
+     ]
+    },
+    {
+     "regione": "UMBRIA",
+     "etichetta": "TR",
+     "tutte": false,
+     "province": [
+      "TR"
+     ],
+     "prezzi": [
+      520.0,
+      604.5,
+      656.5,
+      708.5
+     ]
+    },
+    {
+     "regione": "LAZIO",
+     "etichetta": "RI VT RM",
+     "tutte": false,
+     "province": [
+      "RI",
+      "VT",
+      "RM"
+     ],
+     "prezzi": [
+      630.5,
+      682.5,
+      767.0,
+      871.0
+     ]
+    },
+    {
+     "regione": "LAZIO",
+     "etichetta": "FR LT",
+     "tutte": false,
+     "province": [
+      "FR",
+      "LT"
+     ],
+     "prezzi": [
+      708.5,
+      767.0,
+      858.0,
+      994.5
+     ]
+    },
+    {
+     "regione": "ABRUZZO",
+     "etichetta": "PE TE",
+     "tutte": false,
+     "province": [
+      "PE",
+      "TE"
+     ],
+     "prezzi": [
+      695.5,
+      747.5,
+      845.0,
+      936.0
+     ]
+    },
+    {
+     "regione": "ABRUZZO",
+     "etichetta": "AQ CH",
+     "tutte": false,
+     "province": [
+      "AQ",
+      "CH"
+     ],
+     "prezzi": [
+      721.5,
+      780.0,
+      871.0,
+      1007.5
+     ]
+    },
+    {
+     "regione": "AOSTA",
+     "etichetta": "AO",
+     "tutte": false,
+     "province": [
+      "AO"
+     ],
+     "prezzi": [
+      533.0,
+      630.5,
+      734.5,
+      793.0
+     ]
+    }
+   ],
+   "note": [
+    "VERIFICARE SEMPRE CHE A DESTINO SIA POSSIBILE ACCESSO CON AUTOMEZZO LUNGHEZZA COMPLESSIVA 12 METRI",
+    "I SERVIZI GROUPAGE vegono gestiti DIRETTAMENTE SENZA passaggi presso altri magazzini ."
+   ]
+  },
+  {
+   "zona": "GROUPAGE SUD - ISOLE",
+   "fasce": {
+    "ml": [
+     3.0,
+     4.0,
+     5.0,
+     6.0,
+     7.0,
+     8.0,
+     9.0,
+     13.6
+    ],
+    "bancali": [
+     7.0,
+     10.0,
+     12.0,
+     15.0,
+     17.0,
+     20.0,
+     22.0,
+     33.0
+    ],
+    "quintali": [
+     40.0,
+     50.0,
+     60.0,
+     70.0,
+     80.0,
+     100.0,
+     130.0,
+     280.0
+    ]
+   },
+   "gruppi": [
+    {
+     "regione": "CAMPANIA",
+     "etichetta": "CE",
+     "tutte": false,
+     "province": [
+      "CE"
+     ],
+     "prezzi": [
+      559.0,
+      728.0,
+      819.0,
+      1027.0,
+      1183.0,
+      1326.0,
+      1482.0,
+      1651.0
+     ]
+    },
+    {
+     "regione": "CAMPANIA",
+     "etichetta": "BN-NA",
+     "tutte": false,
+     "province": [
+      "BN",
+      "NA"
+     ],
+     "prezzi": [
+      585.0,
+      767.0,
+      871.0,
+      1066.0,
+      1248.0,
+      1417.0,
+      1560.0,
+      1729.0
+     ]
+    },
+    {
+     "regione": "CAMPANIA",
+     "etichetta": "AV-SA",
+     "tutte": false,
+     "province": [
+      "AV",
+      "SA"
+     ],
+     "prezzi": [
+      598.0,
+      793.0,
+      936.0,
+      1118.0,
+      1313.0,
+      1495.0,
+      1638.0,
+      1794.0
+     ]
+    },
+    {
+     "regione": "MOLISE",
+     "etichetta": "CB / IS",
+     "tutte": false,
+     "province": [
+      "CB",
+      "IS"
+     ],
+     "prezzi": [
+      637.0,
+      845.0,
+      1001.0,
+      1196.0,
+      1391.0,
+      1599.0,
+      1677.0,
+      1781.0
+     ]
+    },
+    {
+     "regione": "PUGLIA",
+     "etichetta": "LE",
+     "tutte": false,
+     "province": [
+      "LE"
+     ],
+     "prezzi": [
+      845.0,
+      1131.0,
+      1339.0,
+      1586.0,
+      1924.0,
+      2184.0,
+      2236.0,
+      2366.0
+     ]
+    },
+    {
+     "regione": "PUGLIA",
+     "etichetta": "BR",
+     "tutte": false,
+     "province": [
+      "BR"
+     ],
+     "prezzi": [
+      832.0,
+      1092.0,
+      1300.0,
+      1534.0,
+      1794.0,
+      2041.0,
+      2171.0,
+      2288.0
+     ]
+    },
+    {
+     "regione": "PUGLIA",
+     "etichetta": "TA",
+     "tutte": false,
+     "province": [
+      "TA"
+     ],
+     "prezzi": [
+      806.0,
+      1053.0,
+      1248.0,
+      1482.0,
+      1729.0,
+      1963.0,
+      2106.0,
+      2223.0
+     ]
+    },
+    {
+     "regione": "PUGLIA",
+     "etichetta": "BA",
+     "tutte": false,
+     "province": [
+      "BA"
+     ],
+     "prezzi": [
+      702.0,
+      923.0,
+      1092.0,
+      1287.0,
+      1508.0,
+      1716.0,
+      1820.0,
+      1924.0
+     ]
+    },
+    {
+     "regione": "PUGLIA",
+     "etichetta": "BT",
+     "tutte": false,
+     "province": [
+      "BT"
+     ],
+     "prezzi": [
+      637.0,
+      845.0,
+      1001.0,
+      1196.0,
+      1391.0,
+      1599.0,
+      1677.0,
+      1781.0
+     ]
+    },
+    {
+     "regione": "PUGLIA",
+     "etichetta": "FG",
+     "tutte": false,
+     "province": [
+      "FG"
+     ],
+     "prezzi": [
+      598.0,
+      780.0,
+      871.0,
+      1092.0,
+      1261.0,
+      1404.0,
+      1521.0,
+      1625.0
+     ]
+    },
+    {
+     "regione": "BASILICATA",
+     "etichetta": "MT / PZ",
+     "tutte": false,
+     "province": [
+      "MT",
+      "PZ"
+     ],
+     "prezzi": [
+      780.0,
+      1027.0,
+      1222.0,
+      1443.0,
+      1677.0,
+      1911.0,
+      2028.0,
+      2145.0
+     ]
+    },
+    {
+     "regione": "CALABRIA",
+     "etichetta": "CS",
+     "tutte": false,
+     "province": [
+      "CS"
+     ],
+     "prezzi": [
+      884.0,
+      1157.0,
+      1378.0,
+      1690.0,
+      1976.0,
+      2249.0,
+      2314.0,
+      2496.0
+     ]
+    },
+    {
+     "regione": "CALABRIA",
+     "etichetta": "CZ-KR-VV",
+     "tutte": false,
+     "province": [
+      "CZ",
+      "KR",
+      "VV"
+     ],
+     "prezzi": [
+      936.0,
+      1235.0,
+      1469.0,
+      1794.0,
+      2093.0,
+      2392.0,
+      2444.0,
+      2652.0
+     ]
+    },
+    {
+     "regione": "CALABRIA",
+     "etichetta": "RC",
+     "tutte": false,
+     "province": [
+      "RC"
+     ],
+     "prezzi": [
+      975.0,
+      1300.0,
+      1547.0,
+      1911.0,
+      2210.0,
+      2522.0,
+      2587.0,
+      2795.0
+     ]
+    },
+    {
+     "regione": "SICILIA",
+     "etichetta": "CT",
+     "tutte": false,
+     "province": [
+      "CT"
+     ],
+     "prezzi": [
+      1274.0,
+      1677.0,
+      1904.5,
+      2229.5,
+      2548.0,
+      2938.0,
+      3230.5,
+      3510.0
+     ]
+    },
+    {
+     "regione": "SICILIA",
+     "etichetta": "SR-RG-EN-CL",
+     "tutte": false,
+     "province": [
+      "SR",
+      "RG",
+      "EN",
+      "CL"
+     ],
+     "prezzi": [
+      1274.0,
+      1677.0,
+      1904.5,
+      2229.5,
+      2548.0,
+      2938.0,
+      3230.5,
+      3659.5
+     ]
+    },
+    {
+     "regione": "SICILIA",
+     "etichetta": "AG-ME",
+     "tutte": false,
+     "province": [
+      "AG",
+      "ME"
+     ],
+     "prezzi": [
+      1274.0,
+      1677.0,
+      1904.5,
+      2229.5,
+      2548.0,
+      2938.0,
+      3230.5,
+      3737.5
+     ]
+    },
+    {
+     "regione": "SICILIA",
+     "etichetta": "PA",
+     "tutte": false,
+     "province": [
+      "PA"
+     ],
+     "prezzi": [
+      1274.0,
+      1677.0,
+      1904.5,
+      2229.5,
+      2548.0,
+      2938.0,
+      3230.5,
+      3880.5
+     ]
+    },
+    {
+     "regione": "SICILIA",
+     "etichetta": "TP",
+     "tutte": false,
+     "province": [
+      "TP"
+     ],
+     "prezzi": [
+      1274.0,
+      1677.0,
+      1904.5,
+      2229.5,
+      2548.0,
+      2938.0,
+      3230.5,
+      4030.0
+     ]
+    },
+    {
+     "regione": "SARDEGNA",
+     "etichetta": "TUTTE",
+     "tutte": true,
+     "province": [],
+     "prezzi": [
+      1105.0,
+      1573.0,
+      1898.0,
+      2353.0,
+      2678.0,
+      3146.0,
+      3406.0,
+      3620.5
+     ]
+    }
+   ],
+   "note": [
+    "NOTA PER SICILIA :",
+    "LE TARIFFE INDICATE SONO DA CONSIDERARSI PER LA SOLA RESA INTERMODALE",
+    "NOTA PER SARDEGNA :",
+    "ADR !! DISPONIBILE SOLO PER CARICO COMPLETO AL NOLO DI € 2990.00",
+    "VERIFICARE SEMPRE CHE A DESTINO SIA POSSIBILE ACCESSO CON AUTOMEZZO LUNGHEZZA COMPLESSIVA 16 METRI",
+    "Il prezzo a Provincia indicato si riferisce ad una distanza massima di km. 30 dal Capoluogo.",
+    "Oltre 31 km.il prezzo potrebbe subire delle variazioni da concordare.",
+    "NO giorni di consegna Tassativi , tranne COMPLETI ( 13,60 ml / 33 plt )"
+   ]
+  }
+ ],
+ "regole": {
+  "assicurazionePct": 3,
+  "kmInclusi": 30,
+  "criterio": "max"
+ }
+}

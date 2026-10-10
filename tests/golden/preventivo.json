@@ -1,0 +1,83 @@
+{
+"fonte":"listino-in-tasca 1.4.0, js/app.js",
+"parse":[
+["",{"factor":1,"pct":0,"valid":true}],
+[" ",{"factor":1,"pct":0,"valid":true}],
+["0",{"factor":1,"pct":0,"valid":true}],
+["10",{"factor":0.9,"pct":9.999999999999998,"valid":true}],
+["20,5",{"factor":0.795,"pct":20.499999999999996,"valid":true}],
+["20.5",{"factor":0.795,"pct":20.499999999999996,"valid":true}],
+["30+5",{"factor":0.6649999999999999,"pct":33.50000000000001,"valid":true}],
+["30+10+2",{"factor":0.6174,"pct":38.260000000000005,"valid":true}],
+["30 + 5 %",{"factor":0.6649999999999999,"pct":33.50000000000001,"valid":true}],
+["50%",{"factor":0.5,"pct":50,"valid":true}],
+["100",{"factor":0,"pct":100,"valid":true}],
+["100+10",{"factor":0,"pct":100,"valid":true}],
+["101",{"factor":1,"pct":0,"valid":false}],
+["-5",{"factor":1,"pct":0,"valid":false}],
+["abc",{"factor":1,"pct":0,"valid":false}],
+["30++5",{"factor":0.6649999999999999,"pct":33.50000000000001,"valid":true}],
+["+30",{"factor":0.7,"pct":30.000000000000004,"valid":true}],
+["30+",{"factor":0.7,"pct":30.000000000000004,"valid":true}],
+["33,333",{"factor":0.6666700000000001,"pct":33.33299999999999,"valid":true}],
+["0+0+0",{"factor":1,"pct":0,"valid":true}],
+["12,5+7,5",{"factor":0.8093750000000001,"pct":19.062499999999993,"valid":true}]
+],
+"totali":[
+{"vat":22,"quote":{"globalDisc":"","vatOn":false,"items":[{"price":9500,"qty":1,"disc":""}]},"totals":{"gross":9500,"net":9500,"disc":0,"discPct":0,"vat":0,"total":9500,"count":1,"lines":1},"nets":[9500]},
+{"vat":22,"quote":{"globalDisc":"30+5","vatOn":true,"items":[{"price":9500,"qty":2,"disc":""},{"price":65,"qty":1,"disc":"10"},{"price":350,"qty":3,"disc":"0"}]},"totals":{"gross":20115,"net":13743.499999999998,"disc":6371.500000000002,"discPct":31.6753666418096,"vat":3023.5699999999993,"total":16767.069999999996,"count":6,"lines":3},"nets":[12634.999999999998,58.5,1050]},
+{"vat":22,"quote":{"globalDisc":"25","vatOn":true,"items":[{"price":1234.56,"qty":7,"disc":"12,5+7,5"},{"price":0.1,"qty":3,"disc":""},{"price":19.99,"qty":13,"disc":"33,333"}]},"totals":{"gross":8902.09,"net":7168.026532900001,"disc":1734.063467099999,"discPct":19.479284831988874,"vat":1576.9658372380002,"total":8744.992370138001,"count":23,"lines":3},"nets":[6994.554000000001,0.22500000000000003,173.24753290000004]},
+{"vat":22,"quote":{"globalDisc":"abc","vatOn":false,"items":[{"price":100,"qty":1,"disc":""},{"price":100,"qty":1,"disc":"200"}]},"totals":{"gross":200,"net":200,"disc":0,"discPct":0,"vat":0,"total":200,"count":2,"lines":2},"nets":[100,100]},
+{"vat":22,"quote":{"globalDisc":"40","vatOn":true,"items":[]},"totals":{"gross":0,"net":0,"disc":0,"discPct":0,"vat":0,"total":0,"count":0,"lines":0},"nets":[]},
+{"vat":22,"quote":{"globalDisc":"15","vatOn":true,"items":[{"price":21500,"qty":1,"disc":null},{"price":890,"qty":2},{"price":75,"qty":4,"disc":" "}]},"totals":{"gross":23580,"net":20043,"disc":3537,"discPct":15.000000000000002,"vat":4409.46,"total":24452.46,"count":7,"lines":3},"nets":[18275,1513,255]},
+{"vat":10,"quote":{"globalDisc":"","vatOn":false,"items":[{"price":9500,"qty":1,"disc":""}]},"totals":{"gross":9500,"net":9500,"disc":0,"discPct":0,"vat":0,"total":9500,"count":1,"lines":1},"nets":[9500]},
+{"vat":10,"quote":{"globalDisc":"30+5","vatOn":true,"items":[{"price":9500,"qty":2,"disc":""},{"price":65,"qty":1,"disc":"10"},{"price":350,"qty":3,"disc":"0"}]},"totals":{"gross":20115,"net":13743.499999999998,"disc":6371.500000000002,"discPct":31.6753666418096,"vat":1374.3499999999997,"total":15117.849999999999,"count":6,"lines":3},"nets":[12634.999999999998,58.5,1050]},
+{"vat":10,"quote":{"globalDisc":"25","vatOn":true,"items":[{"price":1234.56,"qty":7,"disc":"12,5+7,5"},{"price":0.1,"qty":3,"disc":""},{"price":19.99,"qty":13,"disc":"33,333"}]},"totals":{"gross":8902.09,"net":7168.026532900001,"disc":1734.063467099999,"discPct":19.479284831988874,"vat":716.8026532900002,"total":7884.829186190002,"count":23,"lines":3},"nets":[6994.554000000001,0.22500000000000003,173.24753290000004]},
+{"vat":10,"quote":{"globalDisc":"abc","vatOn":false,"items":[{"price":100,"qty":1,"disc":""},{"price":100,"qty":1,"disc":"200"}]},"totals":{"gross":200,"net":200,"disc":0,"discPct":0,"vat":0,"total":200,"count":2,"lines":2},"nets":[100,100]},
+{"vat":10,"quote":{"globalDisc":"40","vatOn":true,"items":[]},"totals":{"gross":0,"net":0,"disc":0,"discPct":0,"vat":0,"total":0,"count":0,"lines":0},"nets":[]},
+{"vat":10,"quote":{"globalDisc":"15","vatOn":true,"items":[{"price":21500,"qty":1,"disc":null},{"price":890,"qty":2},{"price":75,"qty":4,"disc":" "}]},"totals":{"gross":23580,"net":20043,"disc":3537,"discPct":15.000000000000002,"vat":2004.3,"total":22047.3,"count":7,"lines":3},"nets":[18275,1513,255]},
+{"vat":0,"quote":{"globalDisc":"","vatOn":false,"items":[{"price":9500,"qty":1,"disc":""}]},"totals":{"gross":9500,"net":9500,"disc":0,"discPct":0,"vat":0,"total":9500,"count":1,"lines":1},"nets":[9500]},
+{"vat":0,"quote":{"globalDisc":"30+5","vatOn":true,"items":[{"price":9500,"qty":2,"disc":""},{"price":65,"qty":1,"disc":"10"},{"price":350,"qty":3,"disc":"0"}]},"totals":{"gross":20115,"net":13743.499999999998,"disc":6371.500000000002,"discPct":31.6753666418096,"vat":0,"total":13743.499999999998,"count":6,"lines":3},"nets":[12634.999999999998,58.5,1050]},
+{"vat":0,"quote":{"globalDisc":"25","vatOn":true,"items":[{"price":1234.56,"qty":7,"disc":"12,5+7,5"},{"price":0.1,"qty":3,"disc":""},{"price":19.99,"qty":13,"disc":"33,333"}]},"totals":{"gross":8902.09,"net":7168.026532900001,"disc":1734.063467099999,"discPct":19.479284831988874,"vat":0,"total":7168.026532900001,"count":23,"lines":3},"nets":[6994.554000000001,0.22500000000000003,173.24753290000004]},
+{"vat":0,"quote":{"globalDisc":"abc","vatOn":false,"items":[{"price":100,"qty":1,"disc":""},{"price":100,"qty":1,"disc":"200"}]},"totals":{"gross":200,"net":200,"disc":0,"discPct":0,"vat":0,"total":200,"count":2,"lines":2},"nets":[100,100]},
+{"vat":0,"quote":{"globalDisc":"40","vatOn":true,"items":[]},"totals":{"gross":0,"net":0,"disc":0,"discPct":0,"vat":0,"total":0,"count":0,"lines":0},"nets":[]},
+{"vat":0,"quote":{"globalDisc":"15","vatOn":true,"items":[{"price":21500,"qty":1,"disc":null},{"price":890,"qty":2},{"price":75,"qty":4,"disc":" "}]},"totals":{"gross":23580,"net":20043,"disc":3537,"discPct":15.000000000000002,"vat":0,"total":20043,"count":7,"lines":3},"nets":[18275,1513,255]},
+{"vat":"22","quote":{"globalDisc":"","vatOn":false,"items":[{"price":9500,"qty":1,"disc":""}]},"totals":{"gross":9500,"net":9500,"disc":0,"discPct":0,"vat":0,"total":9500,"count":1,"lines":1},"nets":[9500]},
+{"vat":"22","quote":{"globalDisc":"30+5","vatOn":true,"items":[{"price":9500,"qty":2,"disc":""},{"price":65,"qty":1,"disc":"10"},{"price":350,"qty":3,"disc":"0"}]},"totals":{"gross":20115,"net":13743.499999999998,"disc":6371.500000000002,"discPct":31.6753666418096,"vat":3023.5699999999993,"total":16767.069999999996,"count":6,"lines":3},"nets":[12634.999999999998,58.5,1050]},
+{"vat":"22","quote":{"globalDisc":"25","vatOn":true,"items":[{"price":1234.56,"qty":7,"disc":"12,5+7,5"},{"price":0.1,"qty":3,"disc":""},{"price":19.99,"qty":13,"disc":"33,333"}]},"totals":{"gross":8902.09,"net":7168.026532900001,"disc":1734.063467099999,"discPct":19.479284831988874,"vat":1576.9658372380002,"total":8744.992370138001,"count":23,"lines":3},"nets":[6994.554000000001,0.22500000000000003,173.24753290000004]},
+{"vat":"22","quote":{"globalDisc":"abc","vatOn":false,"items":[{"price":100,"qty":1,"disc":""},{"price":100,"qty":1,"disc":"200"}]},"totals":{"gross":200,"net":200,"disc":0,"discPct":0,"vat":0,"total":200,"count":2,"lines":2},"nets":[100,100]},
+{"vat":"22","quote":{"globalDisc":"40","vatOn":true,"items":[]},"totals":{"gross":0,"net":0,"disc":0,"discPct":0,"vat":0,"total":0,"count":0,"lines":0},"nets":[]},
+{"vat":"22","quote":{"globalDisc":"15","vatOn":true,"items":[{"price":21500,"qty":1,"disc":null},{"price":890,"qty":2},{"price":75,"qty":4,"disc":" "}]},"totals":{"gross":23580,"net":20043,"disc":3537,"discPct":15.000000000000002,"vat":4409.46,"total":24452.46,"count":7,"lines":3},"nets":[18275,1513,255]}
+],
+"testi":[
+{"settings":{"vat":22,"seller":""},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"","vatOn":false,"items":[{"code":"01100313","name":"Articolo 0","price":9500,"qty":1,"disc":""}],"number":null,"customer":""},"testo":"Preventivo\n10/10/2026\n\n• 01100313 Articolo 0\n  9.500,00 €\n\nTotale di listino: 9.500,00 €\nTotale netto: 9.500,00 € + IVA\n\nPrezzi IVA esclusa."},
+{"settings":{"vat":22,"seller":"Mario Rossi, 333 1234567"},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"","vatOn":false,"items":[{"code":"01100313","name":"Articolo 0","price":9500,"qty":1,"disc":""}],"number":null,"customer":""},"testo":"Preventivo\n10/10/2026\n\n• 01100313 Articolo 0\n  9.500,00 €\n\nTotale di listino: 9.500,00 €\nTotale netto: 9.500,00 € + IVA\n\nPrezzi IVA esclusa.\n\nMario Rossi, 333 1234567"},
+{"settings":{"vat":22,"seller":""},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"30+5","vatOn":true,"items":[{"code":"01100313","name":"Articolo 0","price":9500,"qty":2,"disc":""},{"code":"","name":"Articolo 1","price":65,"qty":1,"disc":"10"},{"code":"","name":"Articolo 2","price":350,"qty":3,"disc":"0"}],"number":"2026/007","customer":"Officina Bianchi"},"testo":"Preventivo 2026/007 per Officina Bianchi\n10/10/2026\n\n• 01100313 Articolo 0 (x2)\n  19.000,00 € − 33,5% = 12.635,00 €\n• Articolo 1\n  65,00 € − 10% = 58,50 €\n• Articolo 2 (x3)\n  1.050,00 €\n\nTotale di listino: 20.115,00 €\nSconto: − 6.371,50 €\nTotale netto: 13.743,50 €\nTotale IVA 22% inclusa: 16.767,07 €\n\nPrezzi IVA esclusa."},
+{"settings":{"vat":22,"seller":"Mario Rossi, 333 1234567"},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"30+5","vatOn":true,"items":[{"code":"01100313","name":"Articolo 0","price":9500,"qty":2,"disc":""},{"code":"","name":"Articolo 1","price":65,"qty":1,"disc":"10"},{"code":"","name":"Articolo 2","price":350,"qty":3,"disc":"0"}],"number":"2026/007","customer":"Officina Bianchi"},"testo":"Preventivo 2026/007 per Officina Bianchi\n10/10/2026\n\n• 01100313 Articolo 0 (x2)\n  19.000,00 € − 33,5% = 12.635,00 €\n• Articolo 1\n  65,00 € − 10% = 58,50 €\n• Articolo 2 (x3)\n  1.050,00 €\n\nTotale di listino: 20.115,00 €\nSconto: − 6.371,50 €\nTotale netto: 13.743,50 €\nTotale IVA 22% inclusa: 16.767,07 €\n\nPrezzi IVA esclusa.\n\nMario Rossi, 333 1234567"},
+{"settings":{"vat":22,"seller":""},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"25","vatOn":true,"items":[{"code":"01100313","name":"Articolo 0","price":1234.56,"qty":7,"disc":"12,5+7,5"},{"code":"","name":"Articolo 1","price":0.1,"qty":3,"disc":""},{"code":"","name":"Articolo 2","price":19.99,"qty":13,"disc":"33,333"}],"number":null,"customer":"Officina Bianchi"},"testo":"Preventivo per Officina Bianchi\n10/10/2026\n\n• 01100313 Articolo 0 (x7)\n  8.641,92 € − 19,06% = 6.994,55 €\n• Articolo 1 (x3)\n  0,30 € − 25% = 0,23 €\n• Articolo 2 (x13)\n  259,87 € − 33,33% = 173,25 €\n\nTotale di listino: 8.902,09 €\nSconto: − 1.734,06 €\nTotale netto: 7.168,03 €\nTotale IVA 22% inclusa: 8.744,99 €\n\nPrezzi IVA esclusa."},
+{"settings":{"vat":22,"seller":"Mario Rossi, 333 1234567"},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"25","vatOn":true,"items":[{"code":"01100313","name":"Articolo 0","price":1234.56,"qty":7,"disc":"12,5+7,5"},{"code":"","name":"Articolo 1","price":0.1,"qty":3,"disc":""},{"code":"","name":"Articolo 2","price":19.99,"qty":13,"disc":"33,333"}],"number":null,"customer":"Officina Bianchi"},"testo":"Preventivo per Officina Bianchi\n10/10/2026\n\n• 01100313 Articolo 0 (x7)\n  8.641,92 € − 19,06% = 6.994,55 €\n• Articolo 1 (x3)\n  0,30 € − 25% = 0,23 €\n• Articolo 2 (x13)\n  259,87 € − 33,33% = 173,25 €\n\nTotale di listino: 8.902,09 €\nSconto: − 1.734,06 €\nTotale netto: 7.168,03 €\nTotale IVA 22% inclusa: 8.744,99 €\n\nPrezzi IVA esclusa.\n\nMario Rossi, 333 1234567"},
+{"settings":{"vat":22,"seller":""},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"abc","vatOn":false,"items":[{"code":"01100313","name":"Articolo 0","price":100,"qty":1,"disc":""},{"code":"","name":"Articolo 1","price":100,"qty":1,"disc":"200"}],"number":"2026/007","customer":""},"testo":"Preventivo 2026/007\n10/10/2026\n\n• 01100313 Articolo 0\n  100,00 €\n• Articolo 1\n  100,00 €\n\nTotale di listino: 200,00 €\nTotale netto: 200,00 € + IVA\n\nPrezzi IVA esclusa."},
+{"settings":{"vat":22,"seller":"Mario Rossi, 333 1234567"},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"abc","vatOn":false,"items":[{"code":"01100313","name":"Articolo 0","price":100,"qty":1,"disc":""},{"code":"","name":"Articolo 1","price":100,"qty":1,"disc":"200"}],"number":"2026/007","customer":""},"testo":"Preventivo 2026/007\n10/10/2026\n\n• 01100313 Articolo 0\n  100,00 €\n• Articolo 1\n  100,00 €\n\nTotale di listino: 200,00 €\nTotale netto: 200,00 € + IVA\n\nPrezzi IVA esclusa.\n\nMario Rossi, 333 1234567"},
+{"settings":{"vat":22,"seller":""},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"","globalDisc":"40","vatOn":true,"items":[],"number":null,"customer":"Officina Bianchi"},"testo":"Preventivo per Officina Bianchi\n10/10/2026\n\n\nTotale di listino: 0,00 €\nTotale netto: 0,00 €\nTotale IVA 22% inclusa: 0,00 €"},
+{"settings":{"vat":22,"seller":"Mario Rossi, 333 1234567"},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"","globalDisc":"40","vatOn":true,"items":[],"number":null,"customer":"Officina Bianchi"},"testo":"Preventivo per Officina Bianchi\n10/10/2026\n\n\nTotale di listino: 0,00 €\nTotale netto: 0,00 €\nTotale IVA 22% inclusa: 0,00 €\n\nMario Rossi, 333 1234567"},
+{"settings":{"vat":22,"seller":""},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"15","vatOn":true,"items":[{"code":"01100313","name":"Articolo 0","price":21500,"qty":1,"disc":null},{"code":"","name":"Articolo 1","price":890,"qty":2},{"code":"","name":"Articolo 2","price":75,"qty":4,"disc":" "}],"number":"2026/007","customer":"Officina Bianchi"},"testo":"Preventivo 2026/007 per Officina Bianchi\n10/10/2026\n\n• 01100313 Articolo 0\n  21.500,00 € − 15% = 18.275,00 €\n• Articolo 1 (x2)\n  1.780,00 € − 15% = 1.513,00 €\n• Articolo 2 (x4)\n  300,00 € − 15% = 255,00 €\n\nTotale di listino: 23.580,00 €\nSconto: − 3.537,00 €\nTotale netto: 20.043,00 €\nTotale IVA 22% inclusa: 24.452,46 €\n\nPrezzi IVA esclusa."},
+{"settings":{"vat":22,"seller":"Mario Rossi, 333 1234567"},"quote":{"date":"2026-10-10T08:30:00.000Z","notes":"Prezzi IVA esclusa.","globalDisc":"15","vatOn":true,"items":[{"code":"01100313","name":"Articolo 0","price":21500,"qty":1,"disc":null},{"code":"","name":"Articolo 1","price":890,"qty":2},{"code":"","name":"Articolo 2","price":75,"qty":4,"disc":" "}],"number":"2026/007","customer":"Officina Bianchi"},"testo":"Preventivo 2026/007 per Officina Bianchi\n10/10/2026\n\n• 01100313 Articolo 0\n  21.500,00 € − 15% = 18.275,00 €\n• Articolo 1 (x2)\n  1.780,00 € − 15% = 1.513,00 €\n• Articolo 2 (x4)\n  300,00 € − 15% = 255,00 €\n\nTotale di listino: 23.580,00 €\nSconto: − 3.537,00 €\nTotale netto: 20.043,00 €\nTotale IVA 22% inclusa: 24.452,46 €\n\nPrezzi IVA esclusa.\n\nMario Rossi, 333 1234567"}
+],
+"numeri":[
+"2026/001",
+"2026/002",
+"2026/003"
+],
+"netti":[
+{"prima":{"price":9500,"disc":""},"net":7000,"dopo":{"price":9500,"disc":"26,315789"}},
+{"prima":{"price":1234.56,"disc":""},"net":999.99,"dopo":{"price":1234.56,"disc":"19,000292"}},
+{"prima":{"price":100,"disc":""},"net":150,"dopo":{"price":100,"disc":"0"}},
+{"prima":{"custom":true,"price":0,"disc":""},"net":80,"dopo":{"custom":true,"price":80,"disc":"0"}},
+{"prima":{"manual":true,"price":10,"disc":""},"net":8,"dopo":{"manual":true,"price":8,"disc":"0"}}
+],
+"gruppi":[
+{"prezzi":[9500,2300,640],"net":9900,"sconti":["20,418006","20,418006","20,418006"]},
+{"prezzi":[1000,1000],"net":2500,"sconti":["0","0"]},
+{"prezzi":[0],"net":10,"sconti":[""]}
+]
+}

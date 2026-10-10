@@ -1,0 +1,38 @@
+{
+  "_leggimi": "Testi per il cliente del noleggio operativo, presi dai simulatori BCC Ottobre 2026 (foglio 'Preventivo cliente' e 'Documentazione Cliente'). {spese} e {rid} diventano importi.",
+  "fonte": "Simulatori BCC Noleggio 10.2026, canone mensile e trimestrale",
+  "titolo": "Oppure a noleggio operativo",
+  "canoni": "Canoni al netto di IVA, fissi e comprensivi di polizza assicurativa All-Risk.",
+  "primoCanone": {
+    "mensile": "Addebito del 1° canone posticipato al primo giorno del mese successivo alla ricezione della dichiarazione dei beni attestante l'avvenuta consegna.",
+    "trimestrale": "Addebito del 1° canone posticipato al primo giorno del trimestre successivo alla ricezione della dichiarazione dei beni attestante l'avvenuta consegna."
+  },
+  "spese": "Al primo canone vengono aggiunte le spese di contratto pari a {spese}.",
+  "rid": "Spese incasso RID {rid} al mese.",
+  "simulazione": "Simulazione indicativa, soggetta all'approvazione dell'ente finanziatore: condizioni finali, tassi e approvazione dipendono dall'istruttoria. Tutti gli importi sono IVA esclusa.",
+  "beneficiFiscali": {
+    "titolo": "Benefici fiscali",
+    "testi": [
+      "Il canone è interamente deducibile nell'esercizio fiscale in cui è sostenuto.",
+      "Il bene non entra nei cespiti, non è vincolato alle aliquote di ammortamento, non crea imponibile per la tassazione IRAP."
+    ]
+  },
+  "beneficiFinanziari": {
+    "titolo": "Benefici finanziari",
+    "testi": [
+      "Non influisce sulle linee di credito bancarie, perché non è un finanziamento.",
+      "Bilancio leggero: il bene non è registrato come immobilizzazione, in quanto i canoni di noleggio sono considerati servizi. Le attrezzature non impattano sugli studi di settore."
+    ]
+  },
+  "documentiCliente": {
+    "titolo": "Documentazione cliente — locazione operativa",
+    "fasce": [
+      { "nome": "Fascia A (per tutti i richiedenti)", "descrizione": "Forniture con importi fino a 15.000 € + IVA", "fino": 15000,
+        "documenti": ["Domanda di locazione operativa compilata", "Visura camerale", "Documento d'identità fronte retro del firmatario", "Codice IBAN", "Attestazione di avvenuta consegna debitamente sottoscritta dal cliente"] },
+      { "nome": "Fascia B (solo per ditte individuali, società di persone SAS e SNC e cooperative)", "descrizione": "Forniture per importi superiori a 15.000 € e fino a 30.000 €", "oltre": 15000, "fino": 30000, "inAggiunta": true,
+        "documenti": ["Ultimo Modello Unico con ricevuta di invio telematico", "Bilancio provvisorio dell'anno in corso"] },
+      { "nome": "Fascia C (per tutti i richiedenti)", "descrizione": "Forniture per importi superiori a 30.000 €", "oltre": 30000, "inAggiunta": true,
+        "documenti": ["Ultimi due Modelli Unici o bilanci ufficiali", "Bilancio provvisorio dell'anno in corso"] }
+    ]
+  }
+}

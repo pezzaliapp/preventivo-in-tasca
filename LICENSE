@@ -1,0 +1,11 @@
+Preventivo in tasca
+Copyright (c) 2026 Alessandro Pezzali. Tutti i diritti riservati.
+
+Il codice, i testi, la grafica e i dati di questa applicazione sono di proprietà di
+Alessandro Pezzali. Non è concesso copiarli, modificarli, distribuirli o usarli in altre opere
+senza autorizzazione scritta dell'autore.
+
+Componenti di terze parti inclusi, ciascuno con la propria licenza:
+- pdf.js 3.11.174 (Mozilla Foundation) — Apache License 2.0, vedi lib/PDFJS-LICENSE.txt
+- SheetJS (xlsx.mini) — Apache License 2.0
+- Font Barlow e Barlow Condensed (Jeremy Tribby) — SIL Open Font License 1.1, vedi fonts/OFL.txt

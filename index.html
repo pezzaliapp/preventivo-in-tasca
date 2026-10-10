@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Preventivo in tasca</title>
+  <meta name="description" content="Prodotti dal listino, trasporto e rata di noleggio in un unico preventivo. Funziona anche offline. Di Alessandro Pezzali.">
+  <meta name="author" content="Alessandro Pezzali">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#18222B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Preventivo">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    // Tema scelto a mano, applicato prima di disegnare la pagina (niente lampo bianco)
+    try { var t = JSON.parse(localStorage.getItem('pit_tema')); if (t === 'chiaro') document.documentElement.dataset.theme = 'light'; if (t === 'scuro') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="salta" href="#vista">Vai al contenuto</a>
+  <div class="guscio">
+    <header class="testata">
+      <a class="marchio" href="#/home" aria-label="Preventivo in tasca, vai alla Home">
+        <span class="marchio-segno" aria-hidden="true"></span>
+        <span class="marchio-nome">Preventivo in tasca</span>
+      </a>
+    </header>
+
+    <main id="vista" class="contenuto" tabindex="-1">
+      <noscript><p>Per usare Preventivo in tasca serve JavaScript attivo nel browser.</p></noscript>
+    </main>
+
+    <nav id="navigazione" class="navigazione" aria-label="Sezioni"></nav>
+  </div>
+
+  <a id="barra-totale" class="barra-totale" href="#/invia" hidden>
+    <span class="bt-testo">
+      <span class="bt-etichetta" id="bt-etichetta"></span>
+      <span class="bt-importo" id="bt-importo" aria-live="polite"></span>
+    </span>
+    <span class="bt-vai">Vedi</span>
+  </a>
+
+  <div id="aggiorna" class="aggiorna" role="status" aria-live="polite" hidden>
+    <span>È disponibile una nuova versione.</span>
+    <span style="display:flex;gap:8px">
+      <button id="aggiorna-dopo" type="button" class="btn btn-secondario">Dopo</button>
+      <button id="aggiorna-ora" type="button" class="btn btn-primario">Aggiorna</button>
+    </span>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="area-stampa" aria-hidden="true"></div>
+
+  <!-- Lettore del listino (pdf.js) e file di Listino in tasca portati 1:1 -->
+  <script defer src="lib/pdf.min.js"></script>
+  <script defer src="js/listino/parser.js"></script>
+  <script defer src="js/listino/regole.js"></script>
+  <script defer src="js/listino/cerca.js"></script>
+  <script defer src="js/listino/agente.js"></script>
+  <script defer src="js/listino/pdfview.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

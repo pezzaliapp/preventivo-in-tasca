@@ -6,6 +6,9 @@ Autore unico: **Alessandro Pezzali**. Lingua del progetto: italiano (codice, com
 Una PWA che unisce Listino in tasca, Calcolo trasporti e Calcolo noleggio (Rel01) in un unico
 percorso: Prodotti → Consegna → Pagamento → Invia. Ogni strumento funziona anche da solo.
 Sorgenti originali in `_sorgenti/` (solo lettura, mai pubblicati).
+Note interne solo in locale, mai pubblicate: `_sorgenti/note/MAPPA_FUNZIONI.md` (funzioni delle tre app e dove
+vivono) e `_sorgenti/note/DECISIONI.md` (decisioni D-xx e segnalazioni S-xx citate nei commenti del codice).
+Guide nella repo: `README.md`, `docs/AGGIORNARE_I_DATI.md`, `docs/GUIDA_PROVA.md`.
 
 ## Vincoli permanenti
 - Le tre app attuali (listino-in-tasca, calcolo-trasporti, Rel01_noleggio) NON si toccano: né repo,
@@ -22,9 +25,13 @@ Sorgenti originali in `_sorgenti/` (solo lettura, mai pubblicati).
 - Numeri e coefficienti non si "correggono" senza chiedere ad Alessandro.
 
 ## Comandi
-- Test: `node --test tests/`
-- Server locale: `python3 -m http.server 8080` poi http://localhost:8080
-- Verifica visiva: script Playwright in `tests/e2e/` (Chromium già installato, niente `playwright install`)
+- Test: `npm test` (oppure `node --test tests/`: su Node 24 la cartella passa da `tests/index.js`,
+  che carica tutti i `tests/*.test.js`; funziona anche `node --test` senza argomenti).
+- Rigenerare i golden (solo con `_sorgenti/` presente): `node tests/golden/genera.js`
+- Server locale: `python3 -m http.server 8080` oppure `node tests/e2e/server.mjs 8080`, poi http://localhost:8080
+- Verifica nel browser: `node tests/e2e/guscio.mjs` (e gli altri script in `tests/e2e/`; accessibilità: `node tests/e2e/accessibilita.mjs`). Usano
+  `playwright-core` 1.62.0 (dev) con il Chromium 1234 già installato: niente `playwright install`.
+- Icone PNG da `icons/icon.svg`: `node tests/e2e/icone.mjs`
 
 ## Stile
 - Testi interfaccia: frasi brevi, italiano semplice, nessun gergo. Formati it-IT (1.234,56 €).

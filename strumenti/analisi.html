@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Analisi mensile costi di trasporto</title>
+  <meta name="theme-color" content="#18222B">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="analisi.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="wordmark">PREVENTIVO IN TASCA</span>
+        <span class="brand-sub">Analisi mensile costi</span>
+      </div>
+      <a class="ghost-btn" href="../#/impostazioni">Torna all'app</a>
+    </div>
+  </header>
+
+  <main class="an">
+    <h1>Analisi dei costi di trasporto</h1>
+    <p class="lead">Carica il file Excel delle spese di trasporto: l'analisi del mese, i confronti e le spedizioni da controllare compaiono qui sotto.</p>
+
+    <label class="drop" id="drop">
+      <input type="file" id="file" accept=".xlsx,.xls" hidden>
+      <strong id="dropTitle">Trascina qui il file delle spese di trasporto</strong>
+      <small id="dropSub">oppure clicca per sceglierlo dal computer</small>
+    </label>
+    <p class="privacy">Il file viene letto solo da questo browser: nessun dato viene inviato o salvato online.</p>
+
+    <section id="out" hidden>
+      <div class="bar">
+        <label>Periodo
+          <select id="month" class="select"></select>
+        </label>
+        <div class="acts">
+          <button class="btn btn-ghost" id="btnCsv" type="button">Esporta controlli (CSV)</button>
+          <button class="btn" id="btnPrint" type="button">Stampa / PDF</button>
+        </div>
+      </div>
+
+      <div class="kpis" id="kpis"></div>
+
+      <section class="panel">
+        <h2>Andamento mensile</h2>
+        <p class="sub">Costo dei trasporti e importi addebitati ai clienti, mese per mese.</p>
+        <div class="wrap"><svg id="chart" class="chart" role="img" aria-label="Grafico costi e addebiti per mese"></svg></div>
+        <div class="legend"><span><i style="background:var(--ink)"></i>Costo</span><span><i style="background:var(--red)"></i>Addebitato ai clienti</span></div>
+      </section>
+
+      <section class="panel">
+        <h2>Per vettore</h2>
+        <p class="sub" id="vettSub"></p>
+        <div class="wrap"><table class="tbl" id="vettTbl"></table></div>
+      </section>
+
+      <section class="panel">
+        <h2>Da controllare</h2>
+        <p class="sub">Spedizioni che meritano una verifica prima di chiudere il mese.</p>
+        <div id="checks"></div>
+      </section>
+
+      <section class="panel" id="listinoPanel">
+        <h2>Fatture pallet a confronto con le tariffe</h2>
+        <div id="listino"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="../lib/xlsx.mini.min.js"></script>
+  <script src="analisi.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "fonte": "MIMIT - Osservatorio prezzi carburanti, media nazionale self, rete stradale",
+  "base": {
+    "prezzo": 1.665,
+    "data": "2026-01",
+    "descrizione": "media gennaio 2026"
+  },
+  "attuale": {
+    "prezzo": 2.252,
+    "data": "2026-10-10"
+  }
+}

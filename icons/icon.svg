@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Preventivo in tasca</title>
+  <rect width="512" height="512" rx="112" fill="#18222B"/>
+  <path d="M164 92h146l58 58v236H164z" fill="#FFC20E"/>
+  <path d="M310 92v58h58z" fill="#E8AE00"/>
+  <path d="M200 168h82M200 210h128M200 252h128" stroke="#18222B" stroke-width="20" stroke-linecap="round"/>
+  <path d="M116 286h280v74c0 47-38 86-86 86H202c-48 0-86-39-86-86z" fill="#3A4955"/>
+  <path d="M146 312h220v48c0 33-27 60-60 60h-100c-33 0-60-27-60-60z" fill="none" stroke="#FFC20E" stroke-width="7" stroke-dasharray="16 12" stroke-linecap="round"/>
+</svg>
