@@ -1,0 +1,21 @@
+# Sorgenti delle app originali: solo in locale, mai su GitHub
+_sorgenti/
+
+# Il listino non deve mai finire nella repo (eccezione: documenti BCC pubblici)
+*.pdf
+*.PDF
+!data/noleggio/documenti/*.pdf
+
+# Sorgenti in chiaro del book dell'agente: mai nella repo
+*.source.json
+build-pack.js
+privato/
+disegni.map.json
+LEGGIMI-PRIVATO.txt
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
