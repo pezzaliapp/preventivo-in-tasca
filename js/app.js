@@ -9,8 +9,9 @@ import { euro } from './core/formato.js';
 import { dataDaIndirizzo } from './core/date.js';
 import { caricaListinoSalvato, ascoltaListino, listino } from './catalogo.js';
 import { rataMinimaTesto } from './moduli/riepilogo.js';
+import { collegaAgente } from './moduli/agente-viste.js';
 
-export const VERSIONE = '0.7.3';
+export const VERSIONE = '0.7.4';
 
 /* Rotte: modulo da caricare e posizione nel percorso del preventivo. */
 const ROTTE = {
@@ -228,6 +229,7 @@ async function avvia() {
     if (azione) { e.preventDefault(); azione(); }
   });
   window.addEventListener('hashchange', mostraRotta);
+  collegaAgente(app); // un solo ascoltatore per i pulsanti del book, su ogni schermata e finestra
   await Promise.all([caricaStato(), caricaListinoSalvato()]);
   ascoltaListino(() => { if (listino.appenaSbloccato) { listino.appenaSbloccato = false; toast('Book dell\'agente sbloccato'); } });
   if (!stato.archivioDisponibile) toast('Archivio locale non disponibile in questa modalità del browser');

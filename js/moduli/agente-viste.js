@@ -143,6 +143,9 @@ function apriConsiglio(vehicle) {
 /* ---------- Disegni riservati ---------- */
 const kb = n => n > 1048576 ? (n / 1048576).toFixed(1).replace('.', ',') + ' MB' : Math.round(n / 1024) + ' KB';
 const fileCache = new Map();
+// File PDF già decifrati: su iPhone navigator.share va chiamato subito nel tocco,
+// senza attese prima, altrimenti Safari lo rifiuta (NotAllowedError).
+const filePronti = new Map();
 function byteDisegno(id) {
   if (fileCache.has(id)) return fileCache.get(id);
   const p = W.Agente.decryptFile(listino.catalog, id);
@@ -150,7 +153,7 @@ function byteDisegno(id) {
   p.catch(() => fileCache.delete(id));
   return p;
 }
-export const svuotaDisegni = () => fileCache.clear();
+export const svuotaDisegni = () => { fileCache.clear(); filePronti.clear(); };
 const metaDisegno = id => listino.pack.disegni.find(d => d.id === id);
 export function disegniHTML(list) {
   return `<ul class="documenti">${list.map(d => `
@@ -165,11 +168,12 @@ export function disegniHTML(list) {
     </li>`).join('')}</ul>`;
 }
 let disegnoStato = null;
-async function apriDisegno(id) {
+function apriDisegno(id, { ritocca = false } = {}) {
   const d = metaDisegno(id);
   if (!d) return;
-  apriFoglio(d.title, `
+  const corpo = apriFoglio(d.title, `
     <p class="nota">Disegno riservato · ${esc(d.model)}</p>
+    ${ritocca ? '<p class="avviso avviso-info" role="status">Il disegno è pronto. Tocca di nuovo «Invia» per mandarlo.</p>' : ''}
     <div class="figura"><div class="figura-scorri" id="dw-vista"><p class="nota" style="padding:12px">Apro il disegno…</p></div></div>
     <div class="azioni">
       <button type="button" class="btn btn-secondario" data-agente="disegno-zoom">Ingrandisci</button>
@@ -179,6 +183,8 @@ async function apriDisegno(id) {
     <p class="nota sezione">Si apre solo con il listino caricato. Inviandolo, il cliente riceve il PDF del disegno.</p>`);
   disegnoStato = { id, zoom: 1 };
   disegnaDisegno();
+  preparaDisegni(corpo);
+  if (ritocca) corpo.querySelector('[data-agente="disegno-invia"]')?.focus();
 }
 async function disegnaDisegno() {
   const box = document.getElementById('dw-vista');
@@ -210,31 +216,55 @@ async function disegnaDisegno() {
   }
 }
 async function fileDisegno(id) {
+  if (filePronti.has(id)) return filePronti.get(id);
   const d = metaDisegno(id);
-  return new File([await byteDisegno(id)], d.name, { type: 'application/pdf' });
+  const f = new File([await byteDisegno(id)], d.name, { type: 'application/pdf' });
+  filePronti.set(id, f);
+  return f;
+}
+/** Prepara in sottofondo, uno alla volta, i PDF dei disegni che compaiono in `box`. */
+export async function preparaDisegni(box) {
+  if (!box || !listino.pack || !listino.pack.disegni) return;
+  const ids = [...new Set([...box.querySelectorAll('[data-agente^="disegno"][data-id]')].map(b => b.dataset.id))];
+  for (const id of ids) {
+    if (!metaDisegno(id) || filePronti.has(id)) continue;
+    try { await fileDisegno(id); } catch (e) { /* si riprova al tocco, con il messaggio d'errore */ }
+  }
+}
+function salvaFile(f) {
+  const url = URL.createObjectURL(f);
+  const a = document.createElement('a');
+  a.href = url; a.download = f.name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 30000);
+  toast('Disegno scaricato');
 }
 async function scaricaDisegno(id) {
-  try {
-    const f = await fileDisegno(id);
-    const url = URL.createObjectURL(f);
-    const a = document.createElement('a');
-    a.href = url; a.download = f.name; document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 30000);
-    toast('Disegno scaricato');
-  } catch (e) { toast(e.message || 'Disegno non disponibile'); }
+  try { salvaFile(filePronti.get(id) || await fileDisegno(id)); } catch (e) { toast(e.message || 'Disegno non disponibile'); }
 }
-async function inviaDisegno(id) {
-  try {
-    const f = await fileDisegno(id);
-    if (navigator.canShare && navigator.canShare({ files: [f] })) await navigator.share({ files: [f], title: metaDisegno(id).title });
-    else scaricaDisegno(id);
-  } catch (e) { if (e && e.name !== 'AbortError') toast(e.message || 'Invio non riuscito'); }
+/*
+ * Invia: se il PDF è già pronto, navigator.share parte subito, dentro il tocco.
+ * Se Safari rifiuta lo stesso (NotAllowedError), il disegno si apre a schermo
+ * con il pulsante "Invia" da toccare di nuovo: mai un tocco che non fa niente.
+ */
+function inviaDisegno(id) {
+  const f = filePronti.get(id);
+  if (f) { condividi(id, f); return; }
+  fileDisegno(id).then(f => condividi(id, f), e => toast(e.message || 'Disegno non disponibile'));
+}
+async function condividi(id, f) {
+  if (!(navigator.share && (!navigator.canShare || navigator.canShare({ files: [f] })))) { salvaFile(f); return; }
+  try { await navigator.share({ files: [f], title: metaDisegno(id).title }); } // nessuna attesa prima di questa riga
+  catch (e) {
+    if (e && e.name === 'AbortError') return;
+    if (e && e.name === 'NotAllowedError') { apriDisegno(id, { ritocca: true }); return; }
+    toast((e && e.message) || 'Invio non riuscito');
+  }
 }
 
 /* ---------- Guida agente ---------- */
 export function apriGuida(sez) {
   const g = listino.pack.guide;
-  apriFoglio('Guida agente', `
+  const corpo = apriFoglio('Guida agente', `
     <p class="nota">Book dell'agente. Uso interno: non va mostrata né stampata per il cliente.</p>
     <details class="apri" ${!sez ? 'open' : ''}><summary>Domande da fare</summary><ol class="elenco">${g.domande.map(d => `<li><b>${esc(d.q)}</b><br>${esc(d.a)}</li>`).join('')}</ol></details>
     <details class="apri"><summary>Regole</summary><ul class="elenco">${g.regole.map(t => `<li>${esc(t)}</li>`).join('')}</ul></details>
@@ -246,14 +276,25 @@ export function apriGuida(sez) {
     <p class="nota sezione">${esc(g.contatti)}</p>
     <p class="nota">Fonte: ${esc(listino.pack.source)}.</p>`);
   if (sez) setTimeout(() => { const d = document.getElementById('g-' + sez); if (d) d.scrollIntoView({ block: 'start' }); }, 60);
+  preparaDisegni(corpo);
 }
 
 /* ---------- Note nella scheda prodotto ---------- */
+/** "Disegni per l'incasso" della famiglia: va subito sotto l'articolo selezionato. */
+export function disegniFamigliaHTML(items) {
+  const dws = listino.pack ? A.drawingsFor(listino.pack, items.map(p => p.code)) : [];
+  return dws.length ? `<h3 class="sezione-titolo sezione">Disegni per l'incasso</h3>${disegniHTML(dws)}` : '';
+}
+/** Segno "Disegno incasso" accanto a un articolo: apre il disegno. Solo a schermo, mai in stampa. */
+export function segnoDisegnoHTML(code) {
+  if (!listino.pack || !code) return '';
+  const dws = A.drawingsFor(listino.pack, [code]);
+  return dws.map(d => `<button type="button" class="segno-disegno" data-agente="disegno" data-id="${esc(d.id)}" aria-label="Disegno incasso ${esc(d.model)}"><span class="segno-disegno-chip"><span aria-hidden="true">📐</span> Disegno incasso${dws.length > 1 ? ' ' + esc(d.model) : ''}</span></button>`).join('');
+}
 export function noteFamigliaHTML(items) {
   const n = A.noteFamiglia(listino.pack, items);
-  if (!n) return '';
+  if (!n || (!n.notes.length && !n.infos.length && !n.tags)) return '';
   return `
-    ${n.dws.length ? `<h3 class="sezione-titolo sezione">Disegni per l'incasso</h3>${disegniHTML(n.dws)}` : ''}
     <div class="note-agente sezione">
       <p class="solo-agente-tag">Per l'agente, non va nel preventivo</p>
       ${vehChips(n.tags)}
@@ -297,11 +338,34 @@ export function controlliHTML() {
     </section>`;
 }
 
-/**
- * Gestisce i clic sui pulsanti del book (data-agente). `ridisegna` aggiorna la schermata,
- * `voceLibera(nome)` apre la finestra della voce libera.
+/*
+ * Contesto della schermata aperta per i clic del book: `vehicle` del configuratore,
+ * `ridisegna` aggiorna la schermata, `voceLibera(nome)` apre la finestra della voce libera.
+ * Senza contesto (Opzioni, Pagamento, Invia…) valgono i predefiniti.
  */
-export function gestisciClic(e, { app, vehicle, ridisegna, voceLibera }) {
+const PREDEFINITO = {
+  vehicle: null,
+  ridisegna: () => {},
+  voceLibera: async nome => (await import('./preventivo-righe.js')).voceLiberaFoglio(nome, () => {})
+};
+let contesto = PREDEFINITO;
+/** Una schermata imposta il proprio contesto (letto a ogni clic); la funzione restituita lo toglie. */
+export function contestoAgente(c) {
+  contesto = c;
+  return () => { if (contesto === c) contesto = PREDEFINITO; };
+}
+/** Un solo ascoltatore per tutti i pulsanti data-agente, su ogni schermata e in ogni finestra (.foglio). */
+let collegato = false;
+export function collegaAgente(app) {
+  if (collegato) return;
+  collegato = true;
+  document.addEventListener('click', e => { if (listino.pack) gestisciClic(e, app); });
+}
+
+function gestisciClic(e, app) {
+  const vehicle = contesto.vehicle || PREDEFINITO.vehicle;
+  const ridisegna = contesto.ridisegna || PREDEFINITO.ridisegna;
+  const voceLibera = contesto.voceLibera || PREDEFINITO.voceLibera;
   const el = e.target.closest('[data-agente]');
   if (!el) return false;
   const q = stato.preventivo;

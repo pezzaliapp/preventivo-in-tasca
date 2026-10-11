@@ -9,7 +9,7 @@ import { stato, preventivoCambiato } from '../stato.js';
 import { nuovoId } from '../catalogo.js';
 import { apriFoglio, chiudiFoglio, toast } from '../ui.js';
 import { imgMiniatura, ritaglioRiga } from '../figure.js';
-import { controlliHTML } from './agente-viste.js';
+import { controlliHTML, segnoDisegnoHTML } from './agente-viste.js';
 
 const SCONTI_RAPIDI = [0, 10, 15, 20, 25, 30, 35, 40];
 const q = () => stato.preventivo;
@@ -35,6 +35,7 @@ function rigaHTML(it) {
         ${c ? `<button type="button" class="miniatura rp-miniatura" data-azione="scheda" data-key="${esc(it.key)}" aria-label="Vedi la figura di ${esc(it.code)}">${imgMiniatura(c, 84)}</button>` : ''}
         <p class="rp-nome">${esc(it.name)}${it.power ? ` <span class="nota">${esc(it.power)}</span>` : ''}</p>
       </div>
+      ${segnoDisegnoHTML(it.code)}
       <div class="rp-comandi">
         <div class="campo"><span class="campo-etichetta" id="qta-${esc(it.id)}">Quantità</span>
           <div class="regolatore" role="group" aria-labelledby="qta-${esc(it.id)}">

@@ -11,7 +11,7 @@ import { listino, ascoltaListino, caricaFile, aggiungiArticolo, nelPreventivo } 
 import { stato, ascolta } from '../stato.js';
 import { passiHTML, piede, toast, apriFoglio, icona } from '../ui.js';
 import { imgMiniatura, ritaglioFamiglia, idrataMiniature, disegnaPagina } from '../figure.js';
-import { postazioniHTML, noteFamigliaHTML, gestisciClic } from './agente-viste.js';
+import { postazioniHTML, noteFamigliaHTML, disegniFamigliaHTML, segnoDisegnoHTML, preparaDisegni, contestoAgente } from './agente-viste.js';
 import { righeHTML, collegaRighe, voceLiberaFoglio } from './preventivo-righe.js';
 import { riepilogoHTML, collegaRiepilogo } from './riepilogo.js';
 
@@ -47,6 +47,7 @@ export function rigaArticolo(p, conMeta = false) {
         ${conMeta ? `<span class="nota">${esc(f.title)}, pag. ${p.page}</span>` : ''}
       </button>
       <span class="articolo-lato"><span class="prezzo">${euro(p.price)}</span>${pulsanteAggiungi(p)}</span>
+      ${segnoDisegnoHTML(p.code)}
     </li>`;
 }
 function schedaFamiglia(fid, items) {
@@ -211,6 +212,7 @@ async function apriScheda(fid, focusKey) {
         <button type="button" class="btn btn-secondario btn-piccolo" id="fig-zoom">Ingrandisci</button></div>
     </div>
     ${focus ? `<h3 class="sezione-titolo sezione">Articolo selezionato</h3><ul class="articoli">${rigaArticolo(focus)}</ul>` : ''}
+    ${disegniFamigliaHTML(items)}
     <h3 class="sezione-titolo sezione">${f.accessory ? 'Articoli in questa pagina' : 'Versioni'}</h3>
     <ul class="articoli">${items.filter(p => !focus || p.key !== focus.key).map(p => rigaArticolo(p)).join('')}</ul>
     ${noteFamigliaHTML(items)}
@@ -218,6 +220,7 @@ async function apriScheda(fid, focusKey) {
     ${accs.length ? `<h3 class="sezione-titolo sezione">Accessori consigliati</h3><ul class="articoli">${accs.slice(0, 40).map(p => rigaArticolo(p)).join('')}</ul>
       ${accs.length > 40 ? `<p class="nota">Altri ${accs.length - 40} accessori nella sezione Cerca.</p>` : ''}` : ''}`);
   idrataMiniature(corpo);
+  preparaDisegni(corpo); // PDF pronti per "Invia" (iPhone)
   try {
     const fig = await disegnaPagina(corpo.querySelector('#fig-canvas'), corpo.querySelector('#fig-scorri'), f.page, focus);
     corpo.querySelector('#fig-zoom').addEventListener('click', async e => { const z = await fig.cambiaZoom(); e.target.textContent = z === 1 ? 'Ingrandisci' : 'Riduci'; });
@@ -268,10 +271,13 @@ export function mostra(vista, app) {
   }
   input.addEventListener('change', () => { const f = input.files && input.files[0]; input.value = ''; scegliPdf(f); });
 
-  // Un solo ascoltatore per la schermata e per le finestre aperte sopra (scheda prodotto, book)
+  // I pulsanti del book (data-agente) li gestisce l'ascoltatore unico di agente-viste.js:
+  // qui solo il contesto della schermata.
+  const via4 = contestoAgente({ get vehicle() { return cfg.vehicle; }, ridisegna: disegna, voceLibera: nome => voceLiberaFoglio(nome, disegna) });
+  // Un solo ascoltatore per la schermata e per le finestre aperte sopra (scheda prodotto)
   const clic = e => {
     if (!vista.contains(e.target) && !e.target.closest('.foglio')) return;
-    if (gestisciClic(e, { app, vehicle: cfg.vehicle, ridisegna: disegna, voceLibera: nome => voceLiberaFoglio(nome, disegna) })) return;
+    if (e.target.closest('[data-agente]')) return;
     const el = e.target.closest('[data-azione]');
     if (!el || el.tagName === 'INPUT' || el.tagName === 'SELECT') return;
     const d = el.dataset;
@@ -329,5 +335,5 @@ export function mostra(vista, app) {
   const via3 = collegaRiepilogo(vista);
   const via1 = ascoltaListino(() => { if (sotto !== 'preventivo') disegna(); });
   const via2 = ascolta(() => { const s = vista.querySelector('.schede'); if (s) s.outerHTML = schede(sotto); });
-  return () => { via1(); via2(); via3(); document.removeEventListener('click', clic); clearTimeout(timer); };
+  return () => { via1(); via2(); via3(); via4(); document.removeEventListener('click', clic); clearTimeout(timer); };
 }

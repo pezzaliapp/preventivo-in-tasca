@@ -474,7 +474,7 @@ details.apri[open] > summary::after { transform: rotate(-135deg); margin-bottom:
 .miniatura-icona { color: #5A6A77; }
 .miniatura-assente { background: var(--field); }
 .articoli { list-style: none; margin: 0; padding: 0; }
-.articolo { display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-bottom: 1px solid var(--line); }
+.articolo { display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; padding: 6px 12px; border-bottom: 1px solid var(--line); }
 .articolo:last-child { border-bottom: 0; }
 .articoli-piatti { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-m); margin-top: 10px; }
 .articolo-apri { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-height: var(--tocco); padding: 6px 0; background: none; border: 0; text-align: left; }
@@ -552,7 +552,12 @@ details.apri[open] > summary::after { transform: rotate(-135deg); margin-bottom:
 .elenco-spunte { list-style: none; padding: 0; }
 .spunta-riga { display: flex; gap: 10px; align-items: center; min-height: var(--tocco); }
 .spunta-riga input { width: 24px; height: 24px; }
-@media print { .blocco-agente, .controlli, .note-agente, .solo-agente-tag { display: none !important; } }
+/* Segno "Disegno incasso" accanto agli articoli (solo agente): area di tocco 48 px, chip piccolo */
+.segno-disegno { display: inline-flex; align-items: center; min-height: var(--tocco); padding: 0; background: none; border: 0; color: var(--info); font-weight: 700; font-size: var(--testo-piccolo); text-align: left; }
+.segno-disegno-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: var(--info-soft); }
+.articolo .segno-disegno { flex-basis: 100%; margin-top: -6px; }
+.riga-prev .segno-disegno { margin-top: 4px; }
+@media print { .blocco-agente, .controlli, .note-agente, .solo-agente-tag, .segno-disegno { display: none !important; } }
 
 /* ---------- Archivio ---------- */
 .archivio { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
