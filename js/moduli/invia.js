@@ -1,6 +1,6 @@
 /*
- * Invia (passo 4): stampa o PDF, condivisione, salvataggio e nuovo preventivo.
- * La stampa e il testo condiviso contengono SOLO dati per il cliente: niente del book dell'agente.
+ * Invia (passo 4): stampa, "Invia PDF", condivisione, salvataggio e nuovo preventivo.
+ * Stampa, PDF e testo condiviso contengono SOLO dati per il cliente: niente del book dell'agente.
  */
 import { totals, lineDisc, lineNet, shareText, validoFino, contraddizioni } from '../core/preventivo.js';
 import { euro, percento, esc } from '../core/formato.js';
@@ -13,14 +13,15 @@ import { oggiISO } from '../core/date.js';
 import { datiNoleggio } from './noleggio.js';
 import { riquadroNoleggioHTML } from './pagamento.js';
 import { riepilogoHTML } from './riepilogo.js';
+import { modelloPreventivo, nomeFilePdf, browserInterno } from '../core/documento.js';
 
 /** Opzione noleggio del preventivo (null se i dati non si leggono). */
-async function opzioneNoleggio() {
+async function opzioneNoleggio(quote = stato.preventivo) {
   try {
     const [dati, testi] = await Promise.all([datiNoleggio(), caricaJSON('data/noleggio/testi.json')]);
     const listino = N.listinoAttivo(dati, oggiISO(new Date(), window.__pit && window.__pit.anteprimaData));
     const oggi = oggiISO(new Date(), window.__pit && window.__pit.anteprimaData);
-    return { op: N.opzionePreventivo(stato.preventivo, dati, listino), testi, listino, fino: N.validoFinoAl(dati, oggi) };
+    return { op: N.opzionePreventivo(quote, dati, listino), testi, listino, fino: N.validoFinoAl(dati, oggi) };
   } catch (e) { return null; }
 }
 
@@ -99,6 +100,53 @@ export async function condividi() {
 
 export { salva, nuovo };
 
+/* ---------- Invia PDF (non dipende dalla stampa del telefono) ---------- */
+/** PDF del preventivo (quello in corso o uno dell'archivio), con gli stessi contenuti della stampa. */
+export async function pdfPreventivo(quote = q()) {
+  const [{ creaPdf }, nol, imgs] = await Promise.all([
+    import('../pdf-preventivo.js'),
+    opzioneNoleggio(quote),
+    quote.showImages !== false && quote.items.some(it => ritaglioRiga(it)) ? immaginiStampa(quote.items).catch(() => ({})) : {}
+  ]);
+  const blob = await creaPdf(modelloPreventivo({ quote, settings: st(), nol, imgs }));
+  return new File([blob], nomeFilePdf(quote), { type: 'application/pdf' });
+}
+function salvaPdf(f) {
+  const url = URL.createObjectURL(f);
+  const a = document.createElement('a');
+  a.href = url; a.download = f.name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+  toast('PDF salvato: aprilo da File o Download', { durata: 6000 });
+}
+/**
+ * Condivide il PDF. navigator.share parte subito, senza attese prima (iPhone);
+ * se non c'è o viene rifiutato, il file si scarica. Annullare la condivisione non fa nulla.
+ */
+export async function condividiPdf(f) {
+  if (!navigator.share || (navigator.canShare && !navigator.canShare({ files: [f] }))) { salvaPdf(f); return; }
+  try { await navigator.share({ files: [f], title: f.name.replace(/\.pdf$/, '') }); }
+  catch (e) { if (!e || e.name !== 'AbortError') salvaPdf(f); }
+}
+// PDF preparato in anticipo per il preventivo in corso, rifatto quando il preventivo cambia
+const chiavePdf = () => JSON.stringify([q(), st()]);
+let pdfPronto = null, pdfInCorso = null;
+function preparaPdf() {
+  const chiave = chiavePdf();
+  if (pdfPronto && pdfPronto.chiave === chiave) return Promise.resolve(pdfPronto.file);
+  if (pdfInCorso && pdfInCorso.chiave === chiave) return pdfInCorso.promessa;
+  const promessa = pdfPreventivo(q()).then(file => {
+    if (pdfInCorso && pdfInCorso.chiave === chiave) { pdfPronto = { chiave, file }; pdfInCorso = null; }
+    return file;
+  }, e => { if (pdfInCorso && pdfInCorso.chiave === chiave) pdfInCorso = null; throw e; });
+  pdfInCorso = { chiave, promessa };
+  return promessa;
+}
+async function inviaPdf() {
+  if (pdfPronto && pdfPronto.chiave === chiavePdf()) { condividiPdf(pdfPronto.file); return; } // subito, nel tocco
+  toast('Preparo il PDF…');
+  try { await condividiPdf(await preparaPdf()); } catch (e) { console.error(e); toast(e.message || 'PDF non riuscito'); }
+}
+
 export function mostra(vista, app) {
   function disegna() {
     const p = q();
@@ -106,6 +154,7 @@ export function mostra(vista, app) {
     vista.innerHTML = `
       ${passiHTML('invia')}
       <div class="percorso"><div class="percorso-principale">
+      ${browserInterno(navigator.userAgent) ? '<p class="avviso avviso-info sezione-stretta" role="note">Per stampare apri l\'app in Safari o Chrome. Puoi comunque usare Invia PDF.</p>' : ''}
       <h1 class="titolo" tabindex="-1">Invia il preventivo</h1>
       <p class="sottotitolo">${p.number ? `Preventivo ${esc(p.number)}` : 'Nuovo preventivo'}${p.customer ? ` per ${esc(p.customer)}` : ''}, ${new Date(p.date).toLocaleDateString('it-IT')}</p>
       ${p.items.length ? `
@@ -122,7 +171,8 @@ export function mostra(vista, app) {
         </section>
         ${contraddizioni(p).map(m => `<p class="avviso avviso-errore sezione" role="alert">Da controllare: ${esc(m)} <a class="btn btn-secondario btn-piccolo" href="#/prodotti/preventivo">Correggi le note</a></p>`).join('')}
         <div class="azioni">
-          <button type="button" class="btn btn-primario" data-inv="stampa">Stampa o PDF</button>
+          <button type="button" class="btn btn-primario" data-inv="stampa">Stampa</button>
+          <button type="button" class="btn btn-primario" data-inv="pdf">Invia PDF</button>
           <button type="button" class="btn btn-secondario" data-inv="condividi">Condividi</button>
         </div>
         <div class="azioni">
@@ -145,11 +195,16 @@ export function mostra(vista, app) {
     const b = e.target.closest('[data-inv]');
     if (!b) return;
     if (b.dataset.inv === 'stampa') stampa();
+    if (b.dataset.inv === 'pdf') inviaPdf();
     if (b.dataset.inv === 'condividi') condividi();
     if (b.dataset.inv === 'salva') await salva();
     if (b.dataset.inv === 'nuovo') await nuovo();
   });
   vista.closest('.contenuto').classList.add('contenuto-largo');
-  disegna();
-  return ascolta(disegna); // ridisegna a ogni cambiamento (anche "Annulla"), riepilogo compreso
+  // PDF pronto prima del tocco su "Invia PDF" (iPhone): si prepara all'apertura e dopo ogni modifica
+  let timerPdf = null;
+  const prepara = () => { clearTimeout(timerPdf); if (q().items.length) timerPdf = setTimeout(() => preparaPdf().catch(() => {}), 400); };
+  disegna(); prepara();
+  const via = ascolta(() => { disegna(); prepara(); }); // ridisegna a ogni cambiamento (anche "Annulla"), riepilogo compreso
+  return () => { via(); clearTimeout(timerPdf); };
 }

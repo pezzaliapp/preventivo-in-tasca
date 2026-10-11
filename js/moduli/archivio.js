@@ -1,9 +1,9 @@
-/* Archivio: preventivi salvati su questo dispositivo (apri, duplica, elimina con Annulla). */
+/* Archivio: preventivi salvati su questo dispositivo (apri, PDF, duplica, elimina con Annulla). */
 import { Store } from '../store.js';
 import { stato, preventivoCambiato } from '../stato.js';
 import { nuovoId } from '../catalogo.js';
 import { euro, esc } from '../core/formato.js';
-import { piede, toast, conferma } from '../ui.js';
+import { piede, toast, conferma, apriFoglio } from '../ui.js';
 
 export async function mostra(vista, app) {
   async function disegna() {
@@ -23,6 +23,7 @@ export async function mostra(vista, app) {
           <span class="arch-lato">
             <span class="prezzo">${euro(q.totals ? q.totals.net : 0)}</span>
             <span class="arch-azioni">
+              <button type="button" class="btn btn-secondario btn-piccolo" data-arch="pdf" data-id="${esc(q.id)}">PDF</button>
               <button type="button" class="btn btn-secondario btn-piccolo" data-arch="duplica" data-id="${esc(q.id)}">Duplica</button>
               <button type="button" class="btn btn-pericolo btn-piccolo" data-arch="elimina" data-id="${esc(q.id)}">Elimina</button>
             </span>
@@ -53,6 +54,28 @@ export async function mostra(vista, app) {
     const id = b.dataset.id;
     if (b.dataset.arch === 'apri') apri(id, false);
     if (b.dataset.arch === 'duplica') apri(id, true);
+    if (b.dataset.arch === 'pdf') {
+      // il PDF si rifà dal preventivo salvato; poi un tocco su "Invia PDF" lo condivide subito (iPhone)
+      const q = await Store.get('quotes', id);
+      if (!q) return;
+      toast('Preparo il PDF…');
+      try {
+        const { pdfPreventivo, condividiPdf } = await import('./invia.js');
+        const f = await pdfPreventivo(q);
+        const corpo = apriFoglio(`PDF del preventivo ${q.number}`, `
+          <p class="sottotitolo">${esc(f.name)}</p>
+          <div class="azioni">
+            <button type="button" class="btn btn-primario" data-pdf="invia">Invia PDF</button>
+            <button type="button" class="btn btn-secondario" data-pdf="scarica">Scarica</button>
+          </div>`);
+        corpo.addEventListener('click', ev => {
+          const a = ev.target.closest('[data-pdf]');
+          if (!a) return;
+          if (a.dataset.pdf === 'invia') condividiPdf(f);
+          else { const u = URL.createObjectURL(f); const l = document.createElement('a'); l.href = u; l.download = f.name; document.body.appendChild(l); l.click(); l.remove(); setTimeout(() => URL.revokeObjectURL(u), 60000); toast('PDF salvato: aprilo da File o Download', { durata: 6000 }); }
+        });
+      } catch (err) { console.error(err); toast(err.message || 'PDF non riuscito'); }
+    }
     if (b.dataset.arch === 'elimina') {
       const q = await Store.get('quotes', id);
       if (!q || !(await conferma(`Eliminare il preventivo ${q.number}?`, { si: 'Elimina', pericolo: true, dettaglio: 'Viene tolto da questo dispositivo. Subito dopo puoi ancora annullare.' }))) return;

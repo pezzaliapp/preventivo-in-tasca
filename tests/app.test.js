@@ -21,7 +21,7 @@ test('ogni file della lista offline esiste', () => {
 test('nella lista offline ci sono tutti i file dell\'app', () => {
   const servono = [...tutti('js'), ...tutti('css'), ...tutti('fonts').filter(f => f.endsWith('.woff2')),
     ...tutti('icons'), ...tutti('data/trasporti'), ...tutti('data/noleggio'), 'data/agente.pack.json',
-    'lib/pdf.min.js', 'lib/pdf.worker.min.js', 'lib/xlsx.mini.min.js', ...tutti('strumenti'), 'index.html', 'manifest.webmanifest', 'versione.json'];
+    'lib/pdf.min.js', 'lib/pdf.worker.min.js', 'lib/xlsx.mini.min.js', 'lib/jspdf.umd.min.js', ...tutti('strumenti'), 'index.html', 'manifest.webmanifest', 'versione.json'];
   for (const f of servono) assert.ok(SHELL.includes(f), 'non è nella lista offline di sw.js: ' + f);
 });
 

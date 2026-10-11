@@ -65,7 +65,7 @@ tutto il resto deve coincidere al centesimo.
 | b | Configuratore: veicolo › categoria › prodotto | Stesse proposte nello stesso ordine |
 | c | Preventivo con 3 righe, uno sconto per riga e uno sconto generale (per esempio `30+5`) | Stesso netto di riga e stesso totale |
 | d | Con il book: una postazione pronta e i controlli prima di inviare | Stesse voci e stessi avvisi |
-| e | Stampa o PDF del preventivo | Stessi importi; **niente** contenuto del book; in fondo "Preventivo in tasca · Alessandro Pezzali" |
+| e | Stampa e Invia PDF del preventivo | Stessi importi; **niente** contenuto del book; in fondo "Preventivo in tasca · Alessandro Pezzali" |
 
 Differenza attesa: gli importi sono scritti sempre con il punto delle migliaia (1.234,56 €).
 

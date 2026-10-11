@@ -86,4 +86,5 @@ Cosa provare prima di decidere: [docs/GUIDA_PROVA.md](docs/GUIDA_PROVA.md).
 © 2026 Alessandro Pezzali. Tutti i diritti riservati (vedi [LICENSE](LICENSE)).
 Font Barlow con licenza SIL Open Font License ([fonts/OFL.txt](fonts/OFL.txt));
 pdf.js con licenza Apache 2.0 ([lib/PDFJS-LICENSE.txt](lib/PDFJS-LICENSE.txt));
-SheetJS (`lib/xlsx.mini.min.js`, per l'analisi mensile) con licenza Apache 2.0.
+SheetJS (`lib/xlsx.mini.min.js`, per l'analisi mensile) con licenza Apache 2.0;
+jsPDF 4.2.1 (`lib/jspdf.umd.min.js`, per "Invia PDF") con licenza MIT ([lib/JSPDF-LICENSE.txt](lib/JSPDF-LICENSE.txt)).

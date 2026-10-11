@@ -11,7 +11,7 @@ import { caricaListinoSalvato, ascoltaListino, listino } from './catalogo.js';
 import { rataMinimaTesto } from './moduli/riepilogo.js';
 import { collegaAgente } from './moduli/agente-viste.js';
 
-export const VERSIONE = '0.7.5';
+export const VERSIONE = '0.7.6';
 
 /* Rotte: modulo da caricare e posizione nel percorso del preventivo. */
 const ROTTE = {

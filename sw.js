@@ -13,7 +13,7 @@
  *
  * A ogni modifica dei file dell'app: aggiornare VERSION qui e in versione.json.
  */
-const VERSION = 'pit-0.7.5';
+const VERSION = 'pit-0.7.6';
 const SHELL = [
   './',
   'index.html',
@@ -28,9 +28,11 @@ const SHELL = [
   'js/stato.js',
   'js/store.js',
   'js/ui.js',
+  'js/pdf-preventivo.js',
   'js/core/abbinamento.js',
   'js/core/agente.js',
   'js/core/date.js',
+  'js/core/documento.js',
   'js/core/formato.js',
   'js/core/listino.js',
   'js/core/migrazione.js',
@@ -62,6 +64,7 @@ const SHELL = [
   'lib/pdf.min.js',
   'lib/pdf.worker.min.js',
   'lib/xlsx.mini.min.js',
+  'lib/jspdf.umd.min.js',
   'strumenti/analisi.html',
   'strumenti/analisi.css',
   'strumenti/analisi.js',
