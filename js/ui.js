@@ -10,6 +10,7 @@ const PERCORSI = {
   camion: '<path d="M2.5 16.5v-11h11v11M13.5 9h4l3 4v3.5h-1.4M8.2 16.5h7.2"/><circle cx="6" cy="17" r="2"/><circle cx="17.2" cy="17" r="2"/>',
   rata: '<rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 14.5h3M8 17h6"/>',
   freccia: '<path d="m9 5 7 7-7 7"/>',
+  piu: '<path d="M12 5v14M5 12h14"/>',
   indietro: '<path d="m15 5-7 7 7 7"/>'
 };
 

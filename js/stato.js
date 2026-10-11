@@ -46,6 +46,7 @@ function rimanda(fn, ms) {
   let t = null;
   const d = () => { clearTimeout(t); t = setTimeout(() => { t = null; fn(); }, ms); };
   d.subito = () => { if (t !== null) { clearTimeout(t); t = null; fn(); } };
+  d.annulla = () => { clearTimeout(t); t = null; };
   return d;
 }
 // Un salvataggio che non riesce non si ignora: lo si dice (una volta) a chi usa l'app.
@@ -86,6 +87,11 @@ export function preventivoCambiato({ scriveNote = false } = {}) {
   specchioBozza(); salvaBozza(); avvisa();
 }
 export function impostazioniCambiate() { salvaImpostazioni(); avvisa(); }
+/** Scrive subito le impostazioni (per esempio il contatore dei numeri, insieme al preventivo salvato). */
+export function salvaImpostazioniOra() {
+  salvaImpostazioni.annulla();
+  return Store.set('kv', 'settings', stato.impostazioni);
+}
 /** Salva subito tutto (prima di ricaricare o quando l'app va in background). */
 export function salvaTutto() { salvaBozza.subito(); salvaImpostazioni.subito(); }
 

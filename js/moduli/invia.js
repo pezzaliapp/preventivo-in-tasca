@@ -2,12 +2,11 @@
  * Invia (passo 4): stampa o PDF, condivisione, salvataggio e nuovo preventivo.
  * La stampa e il testo condiviso contengono SOLO dati per il cliente: niente del book dell'agente.
  */
-import { totals, lineDisc, lineNet, shareText, nextNumber, validoFino, contraddizioni } from '../core/preventivo.js';
+import { totals, lineDisc, lineNet, shareText, validoFino, contraddizioni } from '../core/preventivo.js';
 import { euro, percento, esc } from '../core/formato.js';
-import { stato, nuovoPreventivo, preventivoCambiato, impostazioniCambiate, ascolta } from '../stato.js';
-import { Store } from '../store.js';
-import { nuovoId } from '../catalogo.js';
-import { passiHTML, piede, toast, apriFoglio, copia, conferma, caricaJSON } from '../ui.js';
+import { stato, ascolta } from '../stato.js';
+import { salva, nuovo } from './nuovo-preventivo.js';
+import { passiHTML, piede, toast, apriFoglio, copia, caricaJSON } from '../ui.js';
 import { immaginiStampa, ritaglioRiga } from '../figure.js';
 import * as N from '../core/noleggio.js';
 import { oggiISO } from '../core/date.js';
@@ -98,27 +97,7 @@ export async function condividi() {
   corpo.querySelector('#cond-copia').addEventListener('click', async () => toast(await copia(testo) ? 'Testo copiato' : 'Copia non riuscita'));
 }
 
-export async function salva() {
-  const p = q();
-  if (!p.items.length) return false;
-  if (!p.id) { p.id = nuovoId(); p.number = nextNumber(st(), new Date().getFullYear()); impostazioniCambiate(); }
-  p.savedAt = new Date().toISOString();
-  p.totals = totals(p, st().vat);
-  await Store.set('quotes', null, JSON.parse(JSON.stringify(p)));
-  preventivoCambiato();
-  toast(`Preventivo ${p.number} salvato`);
-  return true;
-}
-
-export async function nuovo() {
-  const p = q();
-  if (p.items.length && !p.savedAt && !(await conferma('Il preventivo attuale non è salvato. Iniziarne uno nuovo?', { si: 'Inizia un nuovo preventivo', pericolo: true }))) return false;
-  const vecchio = p;
-  stato.preventivo = nuovoPreventivo();
-  preventivoCambiato();
-  toast('Nuovo preventivo', { azione: 'Annulla', quandoAzione: () => { stato.preventivo = vecchio; preventivoCambiato(); } });
-  return true;
-}
+export { salva, nuovo };
 
 export function mostra(vista, app) {
   function disegna() {

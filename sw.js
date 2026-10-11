@@ -13,7 +13,7 @@
  *
  * A ogni modifica dei file dell'app: aggiornare VERSION qui e in versione.json.
  */
-const VERSION = 'pit-0.7.4';
+const VERSION = 'pit-0.7.5';
 const SHELL = [
   './',
   'index.html',
@@ -46,6 +46,7 @@ const SHELL = [
   'js/moduli/preventivo-righe.js',
   'js/moduli/agente-viste.js',
   'js/moduli/invia.js',
+  'js/moduli/nuovo-preventivo.js',
   'js/moduli/consegna.js',
   'js/moduli/pagamento.js',
   'js/moduli/riepilogo.js',

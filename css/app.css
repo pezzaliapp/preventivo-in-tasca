@@ -145,7 +145,11 @@ button { cursor: pointer; }
 .scelta-titolo { display: block; font-family: var(--font-cond); font-weight: 700; font-size: 1.5rem; line-height: 1.1; }
 .scelta-testo { display: block; color: var(--muted); margin-top: 4px; }
 .scelta-freccia { width: 24px; height: 24px; color: var(--muted); }
+.scelta-nuovo { width: 100%; border: 2px solid var(--accent-press); font: inherit; text-align: left; cursor: pointer; }
+.azioni-colonna { flex-direction: column; }
+.azioni-colonna .btn { width: 100%; }
 @media (min-width: 900px) { .scelte { grid-template-columns: repeat(3, minmax(0, 1fr)); } .scelta { grid-template-columns: minmax(0, 1fr); align-content: start; min-height: 220px; } .scelta-freccia { display: none; } }
+@media (min-width: 900px) { .scelte-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .scelte-4 .scelta { min-height: 160px; } }
 
 /* ---------- Percorso del preventivo (passi) ---------- */
 .passi { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 0 0 20px; padding: 0; list-style: none; counter-reset: passo; }

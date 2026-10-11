@@ -9,23 +9,33 @@ export const titolo = 'Home';
 
 export function mostra(vista, app) {
   const t = totaleCorrente();
-  const inCorso = stato.preventivo && stato.preventivo.items.length > 0;
+  const p = stato.preventivo;
+  // in corso: ha righe, oppure è già iniziato con cliente o riferimento
+  const inCorso = !!p && (p.items.length > 0 || !!`${p.customer || ''}${p.reference || ''}`.trim());
   vista.innerHTML = `
     <h1 class="titolo" tabindex="-1">Cosa vuoi fare?</h1>
     <p class="sottotitolo">Prodotti, trasporto e rata di noleggio in un unico preventivo. Ogni strumento si usa anche da solo.</p>
 
     <div id="home-import"></div>
-    <div class="scelte">
+    <div class="scelte ${inCorso ? 'scelte-4' : ''}">
       <a class="scelta scelta-principale" href="#/prodotti">
         <span class="scelta-icona">${icona('preventivo', 32)}</span>
         <span>
           <span class="scelta-titolo">${inCorso ? 'Continua il preventivo' : 'Preventivo completo'}</span>
           <span class="scelta-testo">${inCorso
-            ? `${t.lines} ${t.lines === 1 ? 'articolo' : 'articoli'}, ${euro(t.net)} netti.`
+            ? (t.lines ? `${t.lines} ${t.lines === 1 ? 'articolo' : 'articoli'}, ${euro(t.net)} netti.` : `${p.customer ? esc(p.customer) + ': ' : ''}ancora nessun articolo.`)
             : 'Scegli le macchine dal listino, aggiungi trasporto e rata, poi invia.'}</span>
         </span>
         <span class="scelta-freccia">${icona('freccia')}</span>
       </a>
+      ${inCorso ? `<button type="button" class="scelta scelta-nuovo" id="home-nuovo">
+        <span class="scelta-icona">${icona('piu', 32)}</span>
+        <span>
+          <span class="scelta-titolo">Nuovo preventivo</span>
+          <span class="scelta-testo">Salva o elimina quello in corso e ricomincia da zero.</span>
+        </span>
+        <span class="scelta-freccia">${icona('freccia')}</span>
+      </button>` : ''}
       <a class="scelta" href="#/trasporto">
         <span class="scelta-icona">${icona('camion', 32)}</span>
         <span>
@@ -46,6 +56,10 @@ export function mostra(vista, app) {
 
     ${stato.archivioDisponibile ? '' : '<p class="avviso sezione" role="alert">Archivio locale non disponibile in questa modalità del browser: i dati non verranno salvati.</p>'}
     ${piede(app.versione)}`;
+  vista.querySelector('#home-nuovo')?.addEventListener('click', async () => {
+    const { nuovo } = await import('./nuovo-preventivo.js');
+    if (await nuovo()) app.vai('prodotti');
+  });
   proponiImportazione(vista);
 }
 

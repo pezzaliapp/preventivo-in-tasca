@@ -78,6 +78,7 @@ export function righeHTML() {
         <div class="campo"><label class="campo-etichetta" for="rp-c">Cliente</label><input id="rp-c" class="input" data-prev="customer" value="${esc(p.customer)}" placeholder="Ragione sociale o nome" autocomplete="organization"></div>
         <div class="campo"><label class="campo-etichetta" for="rp-r">Riferimento</label><input id="rp-r" class="input" data-prev="reference" value="${esc(p.reference)}" placeholder="Es. officina di Mario, richiesta del 7/10"></div>
       </div>
+      ${p.items.length || p.customer || p.reference ? '<div class="azioni"><button type="button" class="btn btn-secondario" data-riga="nuovo">Nuovo preventivo</button></div>' : ''}
     </section>
     ${p.items.length ? `
       <section class="riquadro sezione" aria-labelledby="rp-sconto">
@@ -219,6 +220,7 @@ export function collegaRighe(vista, ridisegna) {
       toast(`Tolto: ${tolta.code || tolta.name}`, { azione: 'Annulla', quandoAzione: () => { p.items.splice(Math.min(i, p.items.length), 0, tolta); preventivoCambiato(); ridisegna(); } });
     }
     if (d.riga === 'voce') voceLiberaFoglio('', ridisegna);
+    if (d.riga === 'nuovo') import('./nuovo-preventivo.js').then(m => m.nuovo({ dopo: ridisegna }));
   });
 }
 
