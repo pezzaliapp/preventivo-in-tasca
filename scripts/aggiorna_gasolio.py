@@ -9,7 +9,7 @@ Catena di fonti, dalla più affidabile (dal 17/10/2026 il sito MIMIT non rispond
 - Il dato salvato dice prezzo, data e fonte: {"prezzo", "data", "fonte"}.
 - Non sostituisce mai un dato con uno più vecchio (a pari data vince la fonte più affidabile).
 - La base "media gennaio 2026" (MIMIT) non si tocca.
-- Con --verifica termina con errore solo se il dato è più vecchio di 3 giorni lavorativi:
+- Con --verifica termina con errore solo se il dato è più vecchio di 5 giorni lavorativi:
   GitHub avvisa via e-mail.
 """
 import csv, io, json, re, sys, time, urllib.parse, urllib.request, zipfile
@@ -25,7 +25,7 @@ URL_UE_STORICO = ("https://energy.ec.europa.eu/document/download/906e60ca-8b6a-4
                   "?filename=Weekly_Oil_Bulletin_Prices_History_maticni_4web.xlsx")
 TIMEOUT = 20
 TENTATIVI_MIMIT = 2
-GIORNI_LAVORATIVI_MAX = 3
+GIORNI_LAVORATIVI_MAX = 5
 # fonti in ordine di affidabilità: il nome è quello che l'app mostra accanto al prezzo
 MIMIT, MASE, UE = "MIMIT", "MASE settimanale", "Bollettino UE"
 ORDINE = [MIMIT, MASE, UE]

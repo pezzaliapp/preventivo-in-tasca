@@ -106,14 +106,15 @@ class Salvataggio(unittest.TestCase):
         salvato = {"prezzo": 2.256, "data": "2026-10-16"}
         self.assertEqual(self.esegui(salvato, rete(*PAGINE)), (1, salvato))
 
-    def test_verifica_serale_tre_giorni_lavorativi(self):
+    def test_verifica_serale_cinque_giorni_lavorativi(self):
         fermo = rete(*PAGINE)
         dato = {"prezzo": 2.244, "data": "2026-10-19", "fonte": "MASE settimanale"}   # lunedì
-        self.assertEqual(self.esegui(dato, fermo, "--verifica", oggi="2026-10-22")[0], 0)  # giovedì: 3 giorni
-        self.assertEqual(self.esegui(dato, fermo, "--verifica", oggi="2026-10-23")[0], 1)  # venerdì: 4 giorni
+        self.assertEqual(self.esegui(dato, fermo, "--verifica", oggi="2026-10-23")[0], 0)  # venerdì: 4 giorni
+        self.assertEqual(self.esegui(dato, fermo, "--verifica", oggi="2026-10-26")[0], 0)  # lunedì dopo: 5 giorni
+        self.assertEqual(self.esegui(dato, fermo, "--verifica", oggi="2026-10-27")[0], 1)  # martedì dopo: 6 giorni
         venerdi = {"prezzo": 2.256, "data": "2026-10-16", "fonte": "MIMIT"}
-        self.assertEqual(self.esegui(venerdi, fermo, "--verifica", oggi="2026-10-21")[0], 0)  # sab e dom non contano
-        self.assertEqual(self.esegui(venerdi, fermo, "--verifica", oggi="2026-10-22")[0], 1)
+        self.assertEqual(self.esegui(venerdi, fermo, "--verifica", oggi="2026-10-23")[0], 0)  # sab e dom non contano
+        self.assertEqual(self.esegui(venerdi, fermo, "--verifica", oggi="2026-10-26")[0], 1)
 
     def test_giorni_lavorativi(self):
         self.assertEqual(G.giorni_lavorativi_dopo("2026-10-20", "2026-10-20"), 0)

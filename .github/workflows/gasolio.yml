@@ -7,7 +7,7 @@ name: Aggiorna prezzo gasolio (MIMIT) — copia per Preventivo in tasca
 # e salva anche la fonte (vedi scripts/aggiorna_gasolio.py).
 # Il controllo parte più volte al giorno: se una volta GitHub è in ritardo o le fonti non rispondono,
 # ci pensa l'esecuzione successiva. Alla sera una verifica finale: se il dato è più vecchio di
-# 3 giorni lavorativi l'esecuzione diventa rossa e GitHub manda un'e-mail al proprietario del repository.
+# 5 giorni lavorativi l'esecuzione diventa rossa e GitHub manda un'e-mail al proprietario del repository.
 on:
   schedule:
     - cron: "20 7,9,11,13,15 * * *"   # 9:20, 11:20, 13:20, 15:20, 17:20 ora legale (un'ora prima con l'ora solare)
