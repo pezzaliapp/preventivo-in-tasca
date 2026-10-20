@@ -48,6 +48,17 @@ test('gasolio: incidenza diversa per le isole', () => {
   assert.equal(T.fuelPctFor(D.gasolio, { ...fuel, on: false }, 'LOMBARDIA'), 0);
 });
 
+test('gasolio: la fonte del prezzo è scritta accanto alla data', () => {
+  assert.equal(T.fonteGasolio(D.gasolio), 'MIMIT');                     // dato senza fonte: MIMIT
+  const UE = { ...D, gasolio: { ...D.gasolio, attuale: { prezzo: 2.241, data: '2026-10-12', fonte: 'Bollettino UE' } } };
+  const c = T.creaTrasporti(UE);
+  const S = { cart: [{ uid: 1, qty: 1, kind: 'art', artId: 'touch-mec-2000s' }], reg: 'LOMBARDIA', prov: 'MI', opts: {} };
+  const R = c.compute(S, 0, { on: true, share: 30, shareIs: 15 });
+  assert.ok(R.lines.some(l => l.adj && l.s === 'Prezzo Bollettino UE del 12/10/2026'));
+  assert.match(c.summaryText(R, S, '2026-10-20'), /Gasolio: Bollettino UE 12\/10\/2026/);
+  assert.match(T.infoGasolio(UE.gasolio, '2026-10-20'), /^Ultimo prezzo 2,241 €\/l \(Bollettino UE del 12\/10\/2026\)/);
+});
+
 test('riepilogo: data italiana passata da fuori', () => {
   const S = { cart: [{ uid: 1, qty: 1, kind: 'art', artId: 'touch-mec-2000s' }], reg: 'LOMBARDIA', prov: 'MI', opts: {} };
   const testo = calc.summaryText(calc.compute(S), S, '2026-10-11');

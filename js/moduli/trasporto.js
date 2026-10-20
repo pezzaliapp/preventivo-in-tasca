@@ -69,7 +69,7 @@ export function listiniHTML(D) {
     <section class="sezione">
       <h3 class="sezione-titolo">Prezzo del gasolio</h3>
       <p class="nota">${esc(L.gasolio.fonte)}. ${esc(L.gasolio.nota)}.</p>
-      <div>${g0 ? timbro('Ultimo dato', dataIt(g0.attuale.data)) + timbro('Prezzo', `${it1(g0.attuale.prezzo, 3)} €/l`) : '<p class="nota">Dato non disponibile senza connessione.</p>'}</div>
+      <div>${g0 ? timbro('Ultimo dato', `${T.fonteGasolio(g0)} del ${dataIt(g0.attuale.data)}`) + timbro('Prezzo', `${it1(g0.attuale.prezzo, 3)} €/l`) : '<p class="nota">Dato non disponibile senza connessione.</p>'}</div>
     </section>
     <p class="nota sezione">Dati dell'app aggiornati al ${esc(dataIt(L.aggiornato, true))}.</p>`;
 }

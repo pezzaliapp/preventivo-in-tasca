@@ -88,8 +88,11 @@ Frasi che vanno al cliente: canoni, primo canone, spese, RID, simulazione, benef
   Poi apri in app **Opzioni › Verifica abbinamenti trasporto** e controlla che si abbini alla macchina giusta
   del listino.
 - **Gasolio:** lo aggiorna il workflow `.github/workflows/gasolio.yml` (copia di quello di Calcolo trasporti,
-  che resta dov'è). Legge il prezzo MIMIT più volte al giorno; se alla sera il dato non è di oggi, GitHub
-  manda un'e-mail. Si può lanciare a mano da **Actions › Aggiorna prezzo gasolio › Run workflow**.
+  che resta dov'è). Legge il prezzo MIMIT più volte al giorno; se il sito MIMIT non risponde (succede ai
+  server di GitHub dal 17/10/2026) usa la media settimanale del MASE e poi quella del Bollettino UE. Il file
+  salva prezzo, data e fonte, e l'app mostra la fonte accanto al prezzo. Un dato non viene mai sostituito
+  da uno più vecchio. Se alla sera il dato è più vecchio di 3 giorni lavorativi, GitHub manda un'e-mail.
+  Si può lanciare a mano da **Actions › Aggiorna prezzo gasolio › Run workflow**.
 
 ---
 

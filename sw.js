@@ -13,7 +13,7 @@
  *
  * A ogni modifica dei file dell'app: aggiornare VERSION qui e in versione.json.
  */
-const VERSION = 'pit-0.7.6';
+const VERSION = 'pit-0.7.7';
 const SHELL = [
   './',
   'index.html',

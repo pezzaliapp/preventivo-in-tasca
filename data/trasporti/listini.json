@@ -52,6 +52,6 @@
  },
  "gasolio": {
   "fonte": "MIMIT – Osservatorio prezzi carburanti",
-  "nota": "Prezzo medio nazionale self del gasolio, rete stradale, aggiornato ogni giorno"
+  "nota": "Prezzo medio nazionale self del gasolio, rete stradale, aggiornato ogni giorno. Se il sito MIMIT non risponde si usa la media settimanale del MASE o del Bollettino UE, e accanto al prezzo è indicata la fonte"
  }
 }

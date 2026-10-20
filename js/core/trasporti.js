@@ -169,6 +169,11 @@ export function pezziImpilabili(a) {
   return null;
 }
 
+/** Fonte del prezzo del gasolio salvato: "MIMIT", "MASE settimanale" o "Bollettino UE" (senza fonte: MIMIT). */
+export function fonteGasolio(gasolio) {
+  return gasolio?.attuale?.fonte || 'MIMIT';
+}
+
 /** Variazione % del gasolio rispetto al prezzo base del listino, o null. */
 export function fuelDelta(gasolio) {
   const g = gasolio;
@@ -402,7 +407,7 @@ export function creaTrasporti(D) {
     const fp = fuelPctFor(D.gasolio, FUEL, reg);
     if (fp) {
       const v = round2(total * fp / 100);
-      R.lines.push({ t: `Adeguamento gasolio ${fp > 0 ? '+' : '−'}${it1(Math.abs(fp))}%`, s: `Prezzo MIMIT del ${dataIt(D.gasolio.attuale.data)}`, v, minor: true, adj: true });
+      R.lines.push({ t: `Adeguamento gasolio ${fp > 0 ? '+' : '−'}${it1(Math.abs(fp))}%`, s: `Prezzo ${fonteGasolio(D.gasolio)} del ${dataIt(D.gasolio.attuale.data)}`, v, minor: true, adj: true });
       total = round2(total + v);
       R.used.add('gasolio');
     }
@@ -508,7 +513,7 @@ export function creaTrasporti(D) {
     const L = D.listini, out = [];
     if (used.has('pallet')) { const s = L.servizi.pallet; out.push({ etichetta: 'Pallet', valore: `listino ${s.riferimento.toLowerCase()}`, chi: s.fornitore || '' }); }
     if (used.has('groupage')) { const s = L.servizi.groupage; out.push({ etichetta: 'Groupage', valore: `listino ${s.riferimento.toLowerCase()}`, chi: s.fornitore || '' }); }
-    if (used.has('gasolio')) out.push({ etichetta: 'Gasolio', valore: `MIMIT ${dataIt(D.gasolio.attuale.data)}`, chi: '' });
+    if (used.has('gasolio')) out.push({ etichetta: 'Gasolio', valore: `${fonteGasolio(D.gasolio)} ${dataIt(D.gasolio.attuale.data)}`, chi: '' });
     return out;
   }
   const riferimentoTesto = r => `${r.etichetta}: ${r.valore}${r.chi ? ` · ${r.chi}` : ''}`;
@@ -575,5 +580,5 @@ export function infoGasolio(gasolio, oggi) {
   if (!gasolio) return 'Dati gasolio non disponibili senza connessione.';
   const d = fuelDelta(gasolio), g = gasolio;
   const vecchio = g.attuale.data < oggi;
-  return `${vecchio ? 'Ultimo prezzo' : 'Oggi'} ${it1(g.attuale.prezzo, 3)} €/l (MIMIT, ${dataIt(g.attuale.data)}), ${g.base.descrizione} ${it1(g.base.prezzo, 3)} €/l: ${d >= 0 ? '+' : '−'}${it1(Math.abs(d))}%.${vecchio ? ' Il dato di oggi arriva in automatico appena il MIMIT lo pubblica.' : ''}`;
+  return `${vecchio ? 'Ultimo prezzo' : 'Oggi'} ${it1(g.attuale.prezzo, 3)} €/l (${fonteGasolio(g)} del ${dataIt(g.attuale.data)}), ${g.base.descrizione} ${it1(g.base.prezzo, 3)} €/l: ${d >= 0 ? '+' : '−'}${it1(Math.abs(d))}%.${vecchio ? ' Il dato nuovo arriva in automatico appena è pubblicato.' : ''}`;
 }
