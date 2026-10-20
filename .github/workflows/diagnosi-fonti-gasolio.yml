@@ -1,0 +1,48 @@
+name: Diagnosi fonti gasolio (temporaneo)
+# Prova da un runner GitHub quali fonti del prezzo del gasolio rispondono. Da cancellare dopo l'uso.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  diagnosi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prova le fonti (timeout 20 s ciascuna)
+        shell: python
+        run: |
+          import re, time, urllib.request, json
+          FONTI = [
+              ("controllo: IP del runner", "https://ipinfo.io/json"),
+              ("MIMIT media nazionale", "https://www.mimit.gov.it/it/prezzi-carburanti-media-nazionale"),
+              ("MIMIT senza www", "https://mimit.gov.it/it/prezzi-carburanti-media-nazionale"),
+              ("MISE vecchio dominio", "https://www.mise.gov.it/it/prezzi-carburanti-media-nazionale"),
+              ("MIMIT open data prezzo_alle_8.csv", "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv"),
+              ("Osservaprezzi carburanti.mise.gov.it", "https://carburanti.mise.gov.it/ospzSearch/home"),
+              ("MASE DGSAIE prezzi settimanali CSV", "https://sisen.mase.gov.it/dgsaie/api/v1/weekly-prices/report/export?format=CSV&lang=it"),
+              ("UE Weekly Oil Bulletin pagina", "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"),
+              ("UE Weekly Oil Bulletin storico xlsx", "https://energy.ec.europa.eu/document/download/906e60ca-8b6a-44e7-8589-652854d2fd3f_en?filename=Weekly_Oil_Bulletin_Prices_History_maticni_4web.xlsx"),
+              ("controllo: sito italiano ISTAT", "https://www.istat.it/"),
+          ]
+          for nome, url in FONTI:
+              t = time.time()
+              try:
+                  req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; preventivo-in-tasca/1.0)",
+                                                             "Accept-Language": "it-IT,it;q=0.9"})
+                  r = urllib.request.urlopen(req, timeout=20)
+                  dati = r.read(3_000_000)
+                  testo = dati.decode("utf-8", "replace")
+                  if "media-nazionale" in url:
+                      i = testo.lower().find("prezzi rete stradale")
+                      estratto = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", testo[i:i + 3000]))[:300] if i >= 0 else "(sezione non trovata)"
+                  elif "weekly-prices" in url:
+                      estratto = " | ".join(testo.strip().splitlines()[-2:])
+                  elif url.endswith(".xlsx"):
+                      estratto = f"inizio file: {dati[:4]!r} (xlsx = PK)"
+                  else:
+                      estratto = re.sub(r"\s+", " ", testo[:200])
+                  print(f"OK    {nome}: HTTP {r.status}, {time.time() - t:.1f} s, {len(dati)} byte\n      {estratto}\n")
+              except Exception as e:
+                  print(f"NO    {nome}: {e} ({time.time() - t:.1f} s)\n")
