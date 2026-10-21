@@ -163,3 +163,76 @@ test('fascia groupage: tariffa minima o valore che decide la fascia', () => {
   const fq = T.groupageBand(zona, 1, 65, 12);
   assert.equal(T.fraseFascia(fq, zona.fasce), 'Fascia fino a 6 m · 16 bancali · 70 q, decisa dal peso');
 });
+
+/* Maggiorazione fornitori (eccezione dichiarata il 21/10/2026, decisa da Alessandro): i golden
+   vengono dall'app originale, che non la conosce. Con pct 0 i numeri restano identici al centesimo;
+   con pct 20 la tariffa pallet e groupage cresce esattamente del 20%, il resto si calcola come prima. */
+const conMagg = (pct, dal = '2026-10-21') => T.creaTrasporti({ ...D, listini: { ...D.listini, maggiorazioneFornitori: { pct, dal, nota: 'prova' } } });
+const scenario = c => ({ cart: c.cart.map((l, i) => ({ uid: i + 1, ...l })), reg: c.reg, prov: c.prov, opts: c.opts });
+
+test('maggiorazione fornitori: lettura dai dati, assente o non valida = 0', () => {
+  assert.deepEqual(T.maggiorazioneFornitori(D.listini), { pct: 0, dal: '', nota: '' });
+  assert.equal(T.maggiorazioneFornitori({ maggiorazioneFornitori: { pct: 'venti' } }).pct, 0);
+  assert.equal(T.maggiorazioneFornitori({ maggiorazioneFornitori: { pct: 20, dal: '2026-10-21' } }).pct, 20);
+  assert.equal(T.maggiorazioneFornitori(leggiJSON('data/trasporti/listini.json')).pct, 20);
+});
+
+test('maggiorazione fornitori: con pct 0 tutti i casi golden restano identici', () => {
+  const calc0 = conMagg(0);
+  for (const c of G.casi) {
+    const S = scenario(c);
+    const R = calc0.compute(S, c.adj, c.fuel);
+    assert.deepEqual(sintesi(R), c.R, `${c.nome} → ${c.reg} ${c.prov}`);
+    if (c.testo) assert.equal(senzaMigliaia(senzaData(calc0.summaryText(R, S, '2026-10-10'))), senzaMigliaia(senzaData(c.testo)), c.nome);
+  }
+});
+
+test('maggiorazione fornitori: con pct 20 la tariffa base aumenta esattamente del 20%', () => {
+  const calc20 = conMagg(20);
+  let nPal = 0, nGrp = 0;
+  for (const c of G.casi) {
+    if (!c.R.ready) continue;
+    const S = scenario(c);
+    const R0 = calc.computeMode(S, c.adj, c.fuel, c.R.mode);
+    const R20 = calc20.computeMode(S, c.adj, c.fuel, c.R.mode);
+    const tariffe = R => R.lines.filter(l => !l.minor);
+    assert.deepEqual(tariffe(R20), tariffe(R0), c.nome);              // le righe di tariffa non cambiano
+    for (const l of R20.lines.filter(x => x.forn)) {
+      const righe = tariffe(R0).filter(x => (x.t.startsWith('Groupage: ') ? 'groupage' : 'pallet') === l.forn);
+      const tar = righe.reduce((a, x) => a + x.v, 0);
+      assert.ok(Math.abs(l.v - tar * 0.2) <= 0.01 * righe.length, `${c.nome}: ${l.v} su ${tar}`);
+      if (l.forn === 'pallet') nPal++; else nGrp++;
+    }
+    // Assicurazione: si calcola sulla tariffa già maggiorata
+    for (const t of ['Assicurazione all risk pallet', 'Assicurazione all risk groupage']) {
+      const a0 = R0.lines.find(l => l.t === t), a20 = R20.lines.find(l => l.t === t);
+      if (!a0) continue;
+      const m = R20.lines.find(l => l.forn === (t.endsWith('pallet') ? 'pallet' : 'groupage'));
+      const pct = t.endsWith('pallet') ? D.pallet.regole.assicurazionePct : D.groupage.regole.assicurazionePct;
+      assert.ok(Math.abs(a20.v - a0.v - m.v * pct / 100) <= 0.02, `${c.nome}: ${t}`);
+    }
+  }
+  assert.ok(nPal > 1000 && nGrp > 100, `pallet ${nPal}, groupage ${nGrp}`);
+});
+
+test('maggiorazione fornitori: riga nel riepilogo e nel testo, sopra vengono adeguamento e gasolio', () => {
+  const calc20 = conMagg(20);
+  const S = { cart: [{ uid: 1, qty: 1, kind: 'art', artId: 'handy-scan' }], reg: 'LOMBARDIA', prov: 'MI', opts: { ass: false, pre: false, dis: false, disEur: 0 } };
+  const R = calc20.compute(S, 10, { on: false, share: 30, shareIs: 15 });
+  // 52 € di tariffa MINI → 10,40 € di maggiorazione; l'adeguamento del 10% va su 62,40 €
+  assert.deepEqual(R.lines.map(l => [l.t, l.s, l.v]), [
+    ['HANDY SCAN', '1 × pallet MINI', 52],
+    ['Adeguamento tariffe trasportatori +20%', 'dal 21/10/2026', 10.4],
+    ['Adeguamento costi +10,0%', 'Impostato su questo dispositivo', 6.24],
+    ['Arrotondamento', '', 0.36]
+  ]);
+  assert.equal(R.total, 69);
+  assert.match(calc20.summaryText(R, S, '2026-10-21'), /^Adeguamento tariffe trasportatori \+20% \(dal 21\/10\/2026\): 10,40\s€$/m);
+});
+
+test('maggiorazione fornitori: pallet e groupage insieme, una riga per servizio', () => {
+  const calc20 = conMagg(20);
+  const c = G.casi.find(x => x.R.ready && x.R.used.includes('pallet') && x.R.used.includes('groupage'));
+  const R = calc20.computeMode(scenario(c), 0, { on: false }, c.R.mode);
+  assert.deepEqual(R.lines.filter(l => l.forn).map(l => l.s), ['Pallet, dal 21/10/2026', 'Groupage, dal 21/10/2026']);
+});

@@ -10,9 +10,14 @@ const v = await avvia('Trasporti nel browser');
 const G = JSON.parse(fs.readFileSync(path.join(RADICE, 'tests/golden/trasporti.json'), 'utf8'));
 const numeroIT = s => Number(String(s).replace(/[€\s ]/g, '').replace(/\./g, '').replace(',', '.'));
 
-// 1. Casi di riferimento (gasolio spento: il prezzo del giorno cambia), caricati come stato salvato
+// 1. Casi di riferimento (gasolio spento: il prezzo del giorno cambia), caricati come stato salvato.
+//    L'app originale non conosce la maggiorazione fornitori (eccezione del 21/10/2026): qui il browser
+//    riceve listini.json con pct 0, e i numeri devono restare quelli dell'originale.
 {
   const { ctx, page } = await v.pagina();
+  const listini0 = JSON.parse(fs.readFileSync(path.join(RADICE, 'data/trasporti/listini.json'), 'utf8'));
+  listini0.maggiorazioneFornitori.pct = 0;
+  await ctx.route('**/data/trasporti/listini.json', r => r.fulfill({ contentType: 'application/json', body: JSON.stringify(listini0) }));
   await v.vai(page, 'home');
   const casi = G.casi.filter((c, i) => !c.fuel.on && i % 13 === 0);
   let giusti = 0;
@@ -47,10 +52,14 @@ const numeroIT = s => Number(String(s).replace(/[€\s ]/g, '').replace(/\./g, 
   await page.selectOption('#tr-regione', 'LOMBARDIA');
   await page.selectOption('#tr-provincia', 'MI');
   let tot = await page.locator('#tr-totale').textContent();
-  numeroIT(tot) === 86 ? v.ok('Milano, 1 pallet MEDIUM: 86,00 €') : v.ko('Milano: ' + tot);
+  // dati veri: tariffa 85,80 € + maggiorazione fornitori 20% (17,16 €) = 102,96 → 103 €
+  numeroIT(tot) === 103 ? v.ok('Milano, 1 pallet MEDIUM con maggiorazione fornitori: 103,00 €') : v.ko('Milano: ' + tot);
+  const magg = await page.locator('#tr-righe .bolla-riga', { hasText: 'Adeguamento tariffe trasportatori +20%' }).textContent();
+  /dal 21\/10\/2026/.test(magg) && /17,16/.test(magg) ? v.ok('riga "Adeguamento tariffe trasportatori +20% (dal 21/10/2026)": 17,16 €') : v.ko('riga maggiorazione: ' + magg);
   await page.click('label.interruttore:has(#tr-ass)');
   tot = await page.locator('#tr-totale').textContent();
-  numeroIT(tot) === 88 ? v.ok('con assicurazione: 88,00 €') : v.ko('assicurazione: ' + tot);
+  // assicurazione 3% sulla tariffa maggiorata: 3,09 €
+  numeroIT(tot) === 106 ? v.ok('con assicurazione: 106,00 €') : v.ko('assicurazione: ' + tot);
   // collo manuale in groupage
   await page.click('#tr-manuale-apri');
   await page.click('label.seg-voce:has(input[value="groupage"])');
@@ -78,7 +87,7 @@ const numeroIT = s => Number(String(s).replace(/[€\s ]/g, '').replace(/\./g, 
   await ctx.grantPermissions(['clipboard-read', 'clipboard-write']);
   await page.click('#tr-copia');
   const testo = await page.evaluate(() => navigator.clipboard.readText());
-  /^STIMA COSTO DI TRASPORTO\nData: \d{2}\/\d{2}\/\d{4}\nDestinazione: Sardegna/.test(testo) && /TOTALE: [\d.]+,\d{2}\s€ \+ IVA/.test(testo) ? v.ok('riepilogo copiato con data italiana e totale') : v.ko('testo copiato: ' + testo.slice(0, 120));
+  /^STIMA COSTO DI TRASPORTO\nData: \d{2}\/\d{2}\/\d{4}\nDestinazione: Sardegna/.test(testo) && /TOTALE: [\d.]+,\d{2}\s€ \+ IVA/.test(testo) && /^Adeguamento tariffe trasportatori \+20% \(dal 21\/10\/2026\): [\d.]+,\d{2}\s€$/m.test(testo) ? v.ok('riepilogo copiato con data italiana e totale') : v.ko('testo copiato: ' + testo.slice(0, 120));
   // ricordato alla riapertura
   await page.reload(); await page.waitForSelector('.collo');
   (await page.locator('.collo').count()) === 2 && await page.inputValue('#tr-regione') === 'SARDEGNA' ? v.ok('carico e destinazione ricordati') : v.ko('stato non ricordato');

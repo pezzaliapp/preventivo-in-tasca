@@ -1,5 +1,10 @@
 {
  "aggiornato": "2026-09-30",
+ "maggiorazioneFornitori": {
+  "pct": 20,
+  "dal": "2026-10-21",
+  "nota": "Adeguamento tariffe trasportatori in attesa dei nuovi listini"
+ },
  "servizi": {
   "pallet": {
    "titolo": "Spedizione su pallet",

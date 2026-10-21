@@ -83,6 +83,33 @@ Frasi che vanno al cliente: canoni, primo canone, spese, RID, simulazione, benef
 - **Tariffe nuove:** cambia i prezzi in `pallet.json` o `groupage.json`, poi in `listini.json` aggiorna
   `aggiornato`, `riferimento` e aggiungi una riga nella `storico` del servizio (data e cosa è cambiato).
   Il campo `versione` (oggi `2`) non si tocca: indica il formato del file, non la data delle tariffe.
+- **Maggiorazione sulle tariffe dei trasportatori:** in `listini.json`, blocco `maggiorazioneFornitori`.
+  È uguale per tutti: chi usa l'app non deve impostare nulla.
+
+  ```json
+  "maggiorazioneFornitori": {
+    "pct": 20,
+    "dal": "2026-10-21",
+    "nota": "Adeguamento tariffe trasportatori in attesa dei nuovi listini"
+  }
+  ```
+
+  - `pct`: la percentuale, un solo valore per pallet e groupage. Si aggiunge alla tariffa del listino
+    (comprese le maggiorazioni per i fuori misura). Su questa cifra si calcola poi l'assicurazione.
+    Il preavviso telefonico e il supplemento per località disagiata restano fissi.
+    Sopra vengono, come prima, l'adeguamento costi del dispositivo e il gasolio.
+  - `dal`: data AAAA-MM-GG che si legge nella riga. La maggiorazione vale **appena pubblicata**:
+    la data non la fa partire più tardi.
+  - `nota`: promemoria interno, non compare nell'app.
+  - **Cambiare il valore:** scrivi la nuova percentuale in `pct` (per esempio `25`) e la data di oggi in `dal`.
+  - **Azzerare:** metti `"pct": 0`. I conti tornano identici a quelli del listino (la riga sparisce).
+    Quando arrivano i listini nuovi dei trasportatori, carica le tariffe e azzera `pct` nello stesso commit.
+
+  Nel riepilogo del trasporto e nel testo condiviso compare la riga
+  "Adeguamento tariffe trasportatori +20% (dal 21/10/2026)" con il suo importo. Nel preventivo per il
+  cliente il trasporto resta un solo importo, con la maggiorazione compresa.
+  La stessa modifica va fatta anche in `data/listini.json` dell'app Calcolo trasporti, se si vuole che le
+  due app diano la stessa cifra.
 - **Macchina nuova nel catalogo:** aggiungi un oggetto in `articoli.json` con un `id` mai usato, il nome e i
   colli (`kg`, `l`, `p`, `h` in centimetri). Se va impilata nel groupage, aggiungi `"sovrapponibile": true`.
   Poi apri in app **Opzioni › Verifica abbinamenti trasporto** e controlla che si abbini alla macchina giusta
