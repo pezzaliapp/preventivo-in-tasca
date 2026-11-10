@@ -31,14 +31,26 @@ MIMIT, MASE, UE = "MIMIT", "MASE settimanale", "Bollettino UE"
 ORDINE = [MIMIT, MASE, UE]
 
 
-def oggi_italia():
+def ora_italia(now=None):
     # ora italiana (legale da fine marzo a fine ottobre), sufficiente per il confronto della data
-    now = datetime.now(timezone.utc)
+    now = now or datetime.now(timezone.utc)
     y = now.year
     fine_marzo = max(datetime(y, 3, d, 1, tzinfo=timezone.utc) for d in range(25, 32) if datetime(y, 3, d).weekday() == 6)
     fine_ott = max(datetime(y, 10, d, 1, tzinfo=timezone.utc) for d in range(25, 32) if datetime(y, 10, d).weekday() == 6)
     ore = 2 if fine_marzo <= now < fine_ott else 1
-    return (now + timedelta(hours=ore)).date().isoformat()
+    return now + timedelta(hours=ore)
+
+
+def oggi_italia(now=None):
+    return ora_italia(now).date().isoformat()
+
+
+def giorno_verifica(now=None):
+    """Giorno a cui si riferisce la verifica serale. GitHub a volte avvia le esecuzioni programmate con
+    ore di ritardo: se la verifica delle 19:40 parte dopo mezzanotte (prima di mezzogiorno) conta
+    ancora come verifica del giorno prima, altrimenti il nuovo giorno farebbe scattare un falso allarme."""
+    ora = ora_italia(now)
+    return (ora.date() - timedelta(days=1 if ora.hour < 12 else 0)).isoformat()
 
 
 def giorni_lavorativi_dopo(data: str, oggi: str) -> int:
@@ -203,7 +215,7 @@ def main(argv=None, file=FILE, scarica=scarica, oggi=None):
                   f"({attuale.get('data')}, {attuale.get('fonte', MIMIT)}), nessuna modifica.")
 
     if verifica:
-        oggi = oggi or oggi_italia()
+        oggi = oggi or giorno_verifica()
         salvato = json.loads(file.read_text(encoding="utf-8"))["attuale"]["data"]
         ritardo = giorni_lavorativi_dopo(salvato, oggi)
         if ritardo > GIORNI_LAVORATIVI_MAX:

@@ -116,6 +116,14 @@ class Salvataggio(unittest.TestCase):
         self.assertEqual(self.esegui(venerdi, fermo, "--verifica", oggi="2026-10-23")[0], 0)  # sab e dom non contano
         self.assertEqual(self.esegui(venerdi, fermo, "--verifica", oggi="2026-10-26")[0], 1)
 
+    def test_verifica_in_ritardo_dopo_mezzanotte(self):
+        # 10/11/2026: la verifica delle 19:40 del 9/11 è partita all'1:51 del 10/11 (ritardo di GitHub)
+        utc = lambda s: G.datetime.fromisoformat(s).replace(tzinfo=G.timezone.utc)
+        self.assertEqual(G.giorno_verifica(utc("2026-11-10T00:51:15")), "2026-11-09")
+        self.assertEqual(G.giorno_verifica(utc("2026-11-09T18:40:00")), "2026-11-09")   # orario normale
+        self.assertEqual(G.giorno_verifica(utc("2026-07-01T23:30:00")), "2026-07-01")   # ora legale
+        self.assertEqual(G.giorno_verifica(utc("2026-11-10T11:30:00")), "2026-11-10")   # dopo mezzogiorno
+
     def test_giorni_lavorativi(self):
         self.assertEqual(G.giorni_lavorativi_dopo("2026-10-20", "2026-10-20"), 0)
         self.assertEqual(G.giorni_lavorativi_dopo("2026-10-16", "2026-10-19"), 1)
